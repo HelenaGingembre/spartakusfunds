@@ -1,5 +1,6 @@
 import { BsHeartFill } from "react-icons/bs";
 import { Wrapper, Copy, Heart } from "./Footer.style";
+import { theme } from "../../services/theme";
 
 function Footer() {
   return (
@@ -16,7 +17,7 @@ function Footer() {
             loop: Infinity,
           }}
         >
-          <BsHeartFill color={p.theme.colors.accent} />
+          <BsHeartFill color={theme.colors.accent} />
         </Heart>
         by Olena Izotova.
       </Copy>

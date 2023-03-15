@@ -1,10 +1,7 @@
-import { lazy, Suspense } from "react";
-import { Route } from "react-router-dom";
+import { lazy } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Container from "./components/Container";
-import AppBar from "./components/AppBar";
-import Footer from "./components/Footer";
-import LoaderComponent from "./components/LoaderComponent";
+import { Layout } from "./components/Layout";
 
 import "./App.css";
 
@@ -17,24 +14,15 @@ const NotFoundView = lazy(() => import("./views/NotFoundView"));
 function App() {
   return (
     <>
-      <AppBar />
-      <Container>
-        <Suspense fallback={<LoaderComponent />}>
-          <Route path="/" exact>
-            <p>My first project http://spartacusfunds.com/</p>
-            <HomeView />
-          </Route>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomeView />} />
 
-          <Route path="/projects">
-            <ProjectsView />
-          </Route>
+          <Route path="/projects" element={<ProjectsView />}></Route>
 
-          <Route>
-            <NotFoundView />
-          </Route>
-        </Suspense>
-      </Container>
-      <Footer />
+          <Route path="*" element={<NotFoundView />}></Route>
+        </Route>
+      </Routes>
     </>
   );
 }
