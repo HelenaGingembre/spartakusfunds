@@ -5,9 +5,12 @@ import logo from "../../assets/images/logo.jpg";
 export default function Appbar() {
   return (
     <Header>
-      <a href="/" aria-label="Logo">
+      {/* <a href="/" aria-label="Logo">
         <img src={logo} alt="Logo" width="40" height="40" />
-      </a>
+      </a> */}
+      <div>
+        Spartacus <span>Partners</span>
+      </div>
       <Navigation />
     </Header>
   );

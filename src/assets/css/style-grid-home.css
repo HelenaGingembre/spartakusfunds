@@ -1,0 +1,150 @@
+/******
+start style widget menu navbar
+ */
+/********************
+*****3.1. nav .main-nav***
+*********************/
+.logo-img {
+  width: 25%;
+  float: left;
+  margin-right: 5px;
+}
+
+.main-nav {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 2% 5%;
+  border: none;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.navbar,
+.navbar-collapse {
+  margin-bottom: 0 !important;
+  border: none !important;
+}
+nav.black {
+  background: rgba(6, 33, 52, 0.8);
+}
+nav.black a,
+nav.black .navbar-brand {
+  color: #ffffff;
+}
+.main-nav .navbar-brand {
+  float: left;
+  text-transform: uppercase;
+  margin-top: -10%;
+}
+.main-nav .navbar-brand {
+  font-size: 1em;
+  transition: 0.5s;
+  /*color: rgba(20, 104, 168, 1) ;*/
+}
+/***********************
+***3.2. border effect menu***
+************************/
+.nav * {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+.nav li:before,
+.nav li:after {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  content: "";
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+.nav li:before {
+  right: 0;
+  top: 0;
+  border-radius: 5%;
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  transform: translate(-100%, 50%);
+}
+.nav li:after {
+  left: 0;
+  bottom: 0;
+  border-radius: 5%;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  transform: translate(100%, -50%);
+}
+nav li:hover:before,
+nav li:hover:after {
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+/****************/
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  display: flex;
+}
+nav ul li a {
+  /* color: rgba(20, 104, 168, 1) ;*/
+  padding: 2px 20px;
+  font-size: 0.8em;
+  background: none;
+  /* line-height: 80px;*/
+  text-decoration: none;
+  /*text-transform: uppercase;*/
+  transition: 0.5s;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: rgba(20, 104, 168, 1);
+  background: none;
+  /*  box-shadow: inset 7px 5px 46px -12px rgba(20, 104, 168, 1);*/
+  border-radius: 5px;
+}
+nav.black ul li a.active,
+nav.black ul li a:hover {
+  color: rgba(20, 104, 168, 1);
+  background: none;
+  /* box-shadow: inset 7px 5px 46px -12px rgba(20, 104, 168, 1);*/
+  border-radius: 5px;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus,
+.dropdown-menu,
+.dropdown-menu > * {
+  background: inherit;
+  color: inherit;
+}
+.dropdown-menu {
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  background: rgba(6, 33, 52, 0.8);
+  /*color: rgba(20, 104, 168, 1);*/
+}
+.dropdown-menu > li > a {
+  color: inherit;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: inherit;
+  text-decoration: none;
+  background-color: inherit;
+}
+nav.black .open > .dropdown-menu {
+  background-color: rgba(6, 33, 52, 0.8);
+}
+.navbar-toggle {
+  border: 1px solid rgba(20, 104, 168, 1);
+  border-radius: 5px;
+}
+.navbar-toggle .icon-bar {
+  background: #1b99e8;
+}

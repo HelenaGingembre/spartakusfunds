@@ -24,11 +24,16 @@ function Navigation() {
         </Link>
 
         <Link to="/projects" onClick={menuToggle}>
-          Projects
+          Investment Philosophy
         </Link>
-
-        <Link to="/contacts" onClick={menuToggle}>
-          Contacts
+        <Link to="/market" onClick={menuToggle}>
+          Market
+        </Link>
+        <Link to="/about" onClick={menuToggle}>
+          About Us
+        </Link>
+        <Link to="/contact" onClick={menuToggle}>
+          Contact
         </Link>
       </Nav>
     </>

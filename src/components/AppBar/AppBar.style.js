@@ -7,6 +7,7 @@ export const Header = styled.header`
   justify-content: space-between;
   min-height: 80px;
   padding: 0 20px;
+  background: ${(p) => p.theme.colors.bg_header};
   border-bottom: 1px solid ${(p) => p.theme.colors.accent};
   @media (min-width: 750px) {
     padding: 0 80px;

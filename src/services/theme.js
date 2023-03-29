@@ -1,9 +1,11 @@
 export const theme = {
   colors: {
     background: "#FDF7F2",
+    bg_header: "rgba(6, 28, 70, 0.8)",
     black: "#111111",
     white: "#FFFFFF",
-    accent: "#F59256",
+    accent: "rgba(20, 104, 168, 1)",
+
     buttonAccent: "#FF6101",
     blue: "#3091EB",
     gradient: "linear-gradient(90deg, #FF634E 0%, #FFDF48 105.44%)",
