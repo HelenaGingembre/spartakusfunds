@@ -1,27 +1,12 @@
 import Projects from "../../components/Projects";
-import { ownProjects, commandProjects } from "./myProjects";
-import { Title, TypeProject, List } from "./ProjectsView.style";
+
+import data from "../../services/article.json";
 
 function ProjectsView() {
   return (
-    <>
-      <Title>
-        [<TypeProject> MY PERSONAL</TypeProject> _PROJECTS ]
-      </Title>
-      <List>
-        {ownProjects.map(({ id, label, link, preview, info, tech, repo }) => (
-          <Projects
-            key={id}
-            label={label}
-            link={link}
-            preview={preview}
-            info={info}
-            tech={tech}
-            repo={repo}
-          />
-        ))}
-      </List>
-    </>
+    <section>
+      <Projects projects={data} />
+    </section>
   );
 }
 

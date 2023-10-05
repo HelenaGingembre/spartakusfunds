@@ -6,7 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .is-modal-open {
   overflow: hidden;
 }
@@ -33,11 +39,23 @@ ol {
   margin: 0;
   padding: 0;
 }
-
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: rgba(20, 104, 168, 1);
+}
+span {
+  color: #1b99e8;
+}
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 button {
@@ -52,4 +70,10 @@ button {
 input {
   font-family: inherit;
   outline: none;
+}
+
+section {
+  height: auto; /* дозволяє сайту розтягнутися якщо він більший по висоті*/
+  width: 100%;
+  margin: 0;
 }

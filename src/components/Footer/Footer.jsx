@@ -1,52 +1,51 @@
 import { BsHeartFill } from "react-icons/bs";
-import { Wrapper, Copy, Heart, Link, Info } from "./Footer.style";
+import {
+  Heart,
+  Link,
+  Info,
+  MainFooter,
+  ImgFooter,
+  FooterStart,
+  FooterNav,
+  FooterEnd,
+} from "./Footer.style";
 import { theme } from "../../services/theme";
 
-function Footer() {
+const Footer = () => {
   return (
-    /*<Wrapper>
-      <Copy>
-        © 2023 | Developed
-        <Heart
-          animate={{
-            scale: [1, 1.5, 1],
-          }}
-          transition={{
-            duration: 2,
-            times: [0, 0.5, 1],
-            loop: Infinity,
-          }}
-        >
-          <BsHeartFill color={theme.colors.accent} />
-        </Heart>
-        by Olena Izotova.
-      </Copy>
-    </Wrapper>*/
-    <footer class="main-footer">
-      <a href="#">
-        <img class="img-footer" src="logo.jpg" alt="Spartacus Partners" />
-      </a>
-      <div class="footer-start">
-        <nav class="footernav">
+    <MainFooter>
+      <ImgFooter src="logo.jpg" alt="Spartacus Partners Logo" />
+
+      <FooterStart>
+        <FooterNav>
           <ul>
             <li>
-              <Link exact to="/" /*onClick={menuToggle}*/>
+              <Link
+                exact
+                to="/"
+                /*onClick={menuToggle}*/ rel="noopener noreferrer  nofollow"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/projects" /*onClick={menuToggle}*/>
+              <Link
+                to="/projects"
+                /*onClick={menuToggle}*/ rel="noopener noreferrer  nofollow"
+              >
                 Investment Philosophy
               </Link>
             </li>
           </ul>
-        </nav>
-      </div>
+        </FooterNav>
+      </FooterStart>
 
-      <div class="footer-end">
+      <FooterEnd>
         <Info>
           <span>&copy; 2023 . </span>
-          <a href="#"> by Spartacus Partners</a>
+          <Link href="#" rel="noopener noreferrer  nofollow">
+            by Spartacus Partners
+          </Link>
         </Info>
         <Info>
           <span> Developed </span>
@@ -62,13 +61,13 @@ function Footer() {
           >
             <BsHeartFill color={theme.colors.accent} />
           </Heart>
-          <a href="#" target="_blank">
+          <Link href="#" target="_blank" rel="noopener noreferrer  nofollow">
             by OGI
-          </a>
+          </Link>
         </Info>
-      </div>
-    </footer>
+      </FooterEnd>
+    </MainFooter>
   );
-}
+};
 
 export default Footer;

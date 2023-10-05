@@ -1,13 +1,16 @@
 export const theme = {
   colors: {
-    background: "#FDF7F2",
+    background: "rgba(218, 237, 255, 1)",
     bg_header: "rgba(6, 28, 70, 0.8)",
+    bg_footer: "rgba(6, 33, 52, 1)",
     black: "#111111",
+    gray: "#cccccc",
     white: "#FFFFFF",
     accent: "rgba(20, 104, 168, 1)",
+    accentHover: "rgba(20, 104, 168, 0.5)",
+    accentHoverLink: "#3091EB",
 
-    buttonAccent: "#FF6101",
-    blue: "#3091EB",
+    blue: "rgba(218, 237, 255, 1)",
     gradient: "linear-gradient(90deg, #FF634E 0%, #FFDF48 105.44%)",
 
     text: {
@@ -22,9 +25,10 @@ export const theme = {
     xsss: "16px",
     s: "18px",
     m: "20px",
-    ml: "24px",
+    ml: "22px",
+    mll: "28px",
     l: "36px",
-    xl: "48px",
+    xl: "45px",
     xxl: "64px",
   },
   fontWeights: {

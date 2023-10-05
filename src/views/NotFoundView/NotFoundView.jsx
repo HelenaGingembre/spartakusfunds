@@ -1,11 +1,13 @@
 import errorImage from "../../assets/images/logo.jpg";
 import { Img, Title } from "./NotFoundView.style";
 
-export default function NotFoundView() {
+const NotFoundView = () => {
   return (
     <div role="alert">
-      <Img src={errorImage} width="650" alt="Error" />
       <Title>Page not found 😨</Title>
+      <Img src={errorImage} width="650" alt="Error" />
     </div>
   );
-}
+};
+
+export default NotFoundView;

@@ -2,13 +2,25 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-export const Wrapper = styled.footer`
-  padding: 20px 0;
-  min-height: 80px;
+export const MainFooter = styled.footer`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${(p) => p.theme.colors.background};
+  background-color: ${(p) => p.theme.colors.wight};
+  padding: 0;
+  margin: 0;
+`;
+export const ImgFooter = styled.img`
+  margin: 0 auto;
+  width: 20%;
+`;
+export const FooterStart = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  background: ${(p) => p.theme.colors.background};
+  padding: 10px 20px;
 `;
 
 export const Copy = styled.div`
@@ -19,14 +31,16 @@ export const Copy = styled.div`
 
 export const Info = styled.div`
   display: flex;
-  align-items: center;
   color: ${(p) => p.theme.colors.black};
+  padding: 0 10px;
+  align-items: center;
+  text-align: center;
 `;
 export const Heart = styled(motion.div)`
   margin: 0 15px;
 `;
 
-const commonLinkStyles = `
+const commonLinkStyles = styled.a`
   display: block;
   font-weight: 500;
   font-size: 18px;
@@ -43,13 +57,34 @@ export const Link = styled(NavLink)`
   &.active {
     color: ${(p) => p.theme.colors.accent};
   }
-  @media (max-width: 749px) {
-    margin-bottom: 30px;
+`;
+
+export const FooterNav = styled.nav`
+  color: ${(p) => p.theme.colors.accent};
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
   }
-  @media (min-width: 750px) {
-    margin-right: 55px;
+  ul li {
+    padding: 0 10px;
   }
-  @media (min-width: 900px) {
-    margin-right: 85px;
+  ${Link} {
+    color: ${(p) => p.theme.colors.accent};
+    &:hover,
+    &:focus {
+      color: ${(p) => p.theme.colors.accentHoverLink};
+    }
+  }
+`;
+export const FooterEnd = styled.div`
+  //color: ${(p) => p.theme.colors.accent};
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: ${(p) => p.theme.colors.bg_footer};
+  padding: 20px;
+  @media (max-width: 769px) {
+    flex-wrap: wrap;
   }
 `;

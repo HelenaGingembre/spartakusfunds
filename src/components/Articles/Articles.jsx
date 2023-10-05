@@ -1,20 +1,9 @@
 import propTypes from "prop-types";
 import logo from "../../assets/images/logo.jpg";
 
-import {
-  Item,
-  Preview,
-  Wrapper,
-  Title,
-  Info,
-  Tech,
-  TechItem,
-  Link,
-  Img,
-  Content,
-} from "./Articles.style";
+import { Item, Title, Img, Content } from "./Articles.style";
 
-function Articles({ data }) {
+const Articles = ({ data, key }) => {
   const {
     id,
     title,
@@ -33,30 +22,33 @@ function Articles({ data }) {
   } = data;
 
   return (
-    <Item id={id}>
+    <Item key={id}>
       <div class="logo-market">
         <img
           src={logo}
           alt="logo-market"
-          class="center-img"
+          className="center-img"
           style={{ width: "15%" }}
         />
       </div>
+      <Img src={image} alt={title} className="center-img"></Img>
       <Title> {title} </Title>
 
-      <div class="date">{date}</div>
-      <p class="justify">{description}</p>
-      <h3>{title_block1_content1}</h3>
-      <div class="justify">{block1_content1}</div>
-      <h3>{title_block1_content2}</h3>
-      <div class="justify">{block1_content2}</div>
-      <h3>{title_block1_content3}</h3>
-      <div class="justify">{block1_content3}</div>
-      <h3>{title_block1_content4}</h3>
-      <div class="justify">{block1_content4}</div>
+      <div className="date">{date}</div>
+      <Content>
+        <p className="justify">{description}</p>
+        <h3>{title_block1_content1}</h3>
+        <div className="justify">{block1_content1}</div>
+        <h3>{title_block1_content2}</h3>
+        <div className="justify">{block1_content2}</div>
+        <h3>{title_block1_content3}</h3>
+        <div className="justify">{block1_content3}</div>
+        <h3>{title_block1_content4}</h3>
+        <div className="justify">{block1_content4}</div>
+      </Content>
     </Item>
   );
-}
+};
 
 Articles.propTypes = {
   data: propTypes.arrayOf(

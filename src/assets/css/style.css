@@ -20,7 +20,7 @@
  */
 
 html {
-  height: 100%; /*позволит растянуть сайт на 100% высоты*/
+  height: 100%; /*має ростягнути сайт на 100% висоти*/
 }
 
 body {
@@ -41,7 +41,7 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
+/* h1 {
   font-size: 2.5em;
   text-align: center;
 }
@@ -65,9 +65,9 @@ img {
   border: 0;
   width: 100%;
   height: auto;
-}
+} */
 
-a {
+/* a {
   color: #ffffff;
 }
 
@@ -75,10 +75,10 @@ a:hover,
 a:focus {
   text-decoration: none;
   color: rgba(20, 104, 168, 1);
-}
-span {
+} */
+/* span {
   color: #1b99e8;
-}
+} */
 button,
 input[type="submit"],
 .btn,
@@ -110,6 +110,7 @@ input[type="submit"]:hover,
   color: #ffffff;
 }
 .center {
+  /*   = .BoxCenter in styleComponent */
   text-align: center;
 }
 .justify {
@@ -268,16 +269,16 @@ ul.navbar-nav li:hover a:before {
 }
 /********************
 *****4. Wrapper*********
-*******************/
+*******************
 section {
   color: #0f0f0f;
 }
 section {
-  height: auto; /* позволяем сайту тянуться если он больше по высоте*/
+  height: auto; 
 }
 /********************
 *****5. Grid Layout******
-********************/
+********************
 body {
   display: -ms-grid;
   display: grid;
@@ -287,7 +288,7 @@ body {
     "sidebar"
     "advertise"
     "footer";
-}
+}*/
 .main-head {
   grid-area: header;
   z-index: 999;
@@ -301,7 +302,7 @@ body {
   -ms-grid-columns: auto;
   grid-template-columns: auto;
 }
-.side {
+/* .side {
   grid-area: sidebar;
 }
 .advertise {
@@ -311,10 +312,10 @@ body {
   grid-area: footer;
   color: rgba(20, 104, 168, 1);
   padding: 0;
-}
+}*/
 /************************
 *****6.Section slider header
-*************************/
+*************************
 section.slider {
   background-image: url("../images/equity.jpg");
   background-repeat: no-repeat;
@@ -335,6 +336,7 @@ section.slider {
   -webkit-animation: slide 10s infinite;
   animation: slide 10s infinite;
 }
+*/
 .load {
   -webkit-animation: slide 2s;
   animation: slide 2s;
@@ -344,17 +346,10 @@ section.slider {
   height: auto;
   margin: 0 auto;
 }
-section.slider h2 {
-  font-size: 3em;
-  text-shadow: 0px 1px 3px #0b2e13;
-}
-section.slider p {
-  font-size: 1.1em;
-  text-shadow: 0px 1px 3px #0b2e13;
-}
+
 /***********************
 *****7. Section #news*****
-************************/
+************************
 section.news {
   padding: 5% 5% 1% 5%;
 }
@@ -387,6 +382,7 @@ section.news {
   margin: 3% 0;
   font-size: inherit;
 }
+*/
 /**********************
 *****8. Section Contact, about, site-login*******
 **********************/
@@ -476,25 +472,25 @@ section#site-login a.send {
 /**************************
 *****9. Section side***********
 ***************************/
-.side {
-  display: -ms-grid;
+/*.side {
+   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%; 
 }
 .advertise,
-.side {
+ .side {
   background: #ffffff;
   color: #062134;
   padding: 5%;
-}
-.side-img {
+} */
+/* .side-img {
   display: block;
   width: 100%;
   margin: 0 auto;
   height: auto;
   background-size: cover;
-}
+} */
 .side-text {
   padding: 0 5%;
 }
@@ -555,9 +551,9 @@ section.single {
 }
 /********************
 *****12. Footer*********
-********************/
+********************
 footer {
-  /* position: fixed;*/
+  
   bottom: 0;
   display: grid;
   display: -ms-grid;
@@ -565,7 +561,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   padding: 0;
-  margin: 0 auto; /*убираем подтягивание вверх которое сейчас присутствует*/
+  margin: 0 auto; 
 }
 .footer-start {
   -webkit-box-pack: right;
@@ -586,7 +582,7 @@ nav.footernav ul {
   display: -ms-flexbox;
   display: flex;
   float: none;
-}
+}*/
 .footer-end {
   width: 100vw;
   -webkit-box-pack: justify;
@@ -620,6 +616,7 @@ nav.footernav ul {
 /********************
 *****14. Animation*********
 ********************/
+/* 
 @-webkit-keyframes slide {
   0% {
     background-image: url("../images/equity.jpg");
@@ -634,10 +631,10 @@ nav.footernav ul {
     background-image: url("../images/fixed-income.jpg");
   }
   66.01% {
-    background-image: url("../images/private-equity.jpg");
+    background-image: url("../images/priv-equity.jpg");
   }
   100% {
-    background-image: url("../images/private-equity.jpg");
+    background-image: url("../images/priv-equity.jpg");
   }
 }
 @keyframes slide {
@@ -654,15 +651,16 @@ nav.footernav ul {
     background-image: url("../images/fixed-income.jpg");
   }
   66.01% {
-    background-image: url("../images/private-equity.jpg");
+    background-image: url("../images/priv-equity.jpg");
   }
   100% {
-    background-image: url("../images/private-equity.jpg");
+    background-image: url("../images/priv-equity.jpg");
   }
 }
+*/
 /************************
 *****15. If no grid support
-************************/
+************************
 @supports not ((display: -ms-grid) or (display: grid)) {
   body {
     max-width: 100%;
@@ -675,7 +673,7 @@ nav.footernav ul {
 }
 /***************************
 *****16. Responsive layout****
-****************************/
+****************************
 @media (max-width: 769px) {
   .main-nav .navbar-brand {
     padding: 0;
@@ -743,3 +741,4 @@ nav.footernav ul {
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
 }
+*/

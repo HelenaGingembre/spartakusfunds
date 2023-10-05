@@ -34,7 +34,7 @@ export const Title = styled.h2`
 `;
 
 export const Content = styled.div`
-  padding: 30px 10px;
+  padding: 15px 30px;
 `;
 
 export const Info = styled.p`
@@ -48,27 +48,4 @@ export const Tech = styled.ul`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-`;
-
-export const TechItem = styled.li`
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 1px solid ${(p) => p.theme.colors.text.secondary};
-  border-radius: 8px;
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
-`;
-
-export const Link = styled.a`
-  color: ${(p) => p.theme.colors.text.secondary};
-  transition: color 250ms ${(p) => p.theme.transition};
-  cursor: pointer;
-  &:hover,
-  &:focus {
-    color: ${(p) => p.theme.colors.accent};
-  }
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
 `;

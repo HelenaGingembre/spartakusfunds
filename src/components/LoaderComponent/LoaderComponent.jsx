@@ -2,7 +2,7 @@ import { Blocks } from "react-loader-spinner";
 
 import { Overlay } from "./LoaderComponent.style";
 
-function LoaderComponent() {
+const LoaderComponent = () => {
   return (
     <Overlay>
       <Blocks
@@ -15,6 +15,6 @@ function LoaderComponent() {
       />
     </Overlay>
   );
-}
+};
 
 export default LoaderComponent;

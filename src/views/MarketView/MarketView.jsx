@@ -9,7 +9,7 @@ import {
 import data from "../../services/article.json";
 import Articles from "../../components/Articles/Articles";
 
-export function MarketView() {
+const MarketView = () => {
   return (
     <section>
       <SingleImgDiv class="single-img">
@@ -32,12 +32,12 @@ export function MarketView() {
             {data
               .filter((item) => item.category_id === "1")
               .map((item) => (
-                <Articles data={item} />
+                <Articles key={item.id} data={item} />
               ))}
           </ul>
         </div>
       </SingleContent>
     </section>
   );
-}
+};
 export default MarketView;

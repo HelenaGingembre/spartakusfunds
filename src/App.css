@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+/********************
+*****14. Animation*********
+********************/
+@-webkit-keyframes slide {
+  0% {
+    background-image: url("./assets/images/equity.jpg");
+  }
+  33% {
+    background-image: url("./assets/images/equity.jpg");
+  }
+  33.01% {
+    background-image: url("./assets/images/fixed-income.jpg");
+  }
+  66% {
+    background-image: url("./assets/images/fixed-income.jpg");
+  }
+  66.01% {
+    background-image: url("./assets/images/priv-equity.jpg");
+  }
+  100% {
+    background-image: url("./assets/images/priv-equity.jpg");
+  }
+}
+@keyframes slide {
+  0% {
+    background-image: url("./assets/images/equity.jpg");
+  }
+  33% {
+    background-image: url("./assets/images/equity.jpg");
+  }
+  33.01% {
+    background-image: url("./assets/images/fixed-income.jpg");
+  }
+  66% {
+    background-image: url("./assets/images/fixed-income.jpg");
+  }
+  66.01% {
+    background-image: url("./assets/images/priv-equity.jpg");
+  }
+  100% {
+    background-image: url("./assets/images/priv-equity.jpg");
+  }
+}

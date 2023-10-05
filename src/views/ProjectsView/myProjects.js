@@ -1,4 +1,4 @@
-import buildindImg from "../../assets/images/building.jpg";
+import buildingImg from "../../assets/images/building.jpg";
 import equityImg from "../../assets/images/equity.jpg";
 import market_viewImg from "../../assets/images/market-view.jpg";
 import private_equityImg from "../../assets/images/private-equity.jpg";
@@ -10,7 +10,7 @@ export const ownProjects = [
     label: "Phonebook",
     link: "#",
     repo: "#",
-    preview: buildindImg,
+    preview: buildingImg,
     info: " application with the ability ollections of contacts.",
     tech: [
       { id: "id-1", name: "HTML5" },

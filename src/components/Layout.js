@@ -7,7 +7,7 @@ import { Suspense } from "react";
 import LoaderComponent from "./LoaderComponent/LoaderComponent";
 import Footer from "./Footer/Footer";
 
-export const Layout = () => {
+const Layout = () => {
   return (
     <>
       <AppBar />
@@ -27,3 +27,5 @@ export const Layout = () => {
     </>
   );
 };
+
+export default Layout;

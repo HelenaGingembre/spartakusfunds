@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { Layout } from "./components/Layout";
+import Layout from "./components/Layout";
 
 import "./App.css";
 
@@ -13,7 +13,7 @@ const AboutView = lazy(() => import("./views/AboutView"));
 const ContactView = lazy(() => import("./views/ContactView"));
 const NotFoundView = lazy(() => import("./views/NotFoundView"));
 
-function App() {
+const App = () => {
   return (
     <>
       <Routes>
@@ -29,6 +29,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 import { Nav, Link, MenuBtn } from "./Navigation.style";
 
-function Navigation() {
+const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const menuToggle = () => {
@@ -38,6 +38,6 @@ function Navigation() {
       </Nav>
     </>
   );
-}
+};
 
 export default Navigation;

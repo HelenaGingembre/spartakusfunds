@@ -1,72 +1,36 @@
-import { AiFillGithub } from "react-icons/ai";
-import { FiExternalLink } from "react-icons/fi";
 import propTypes from "prop-types";
-import {
-  Item,
-  Preview,
-  Wrapper,
-  Title,
-  Info,
-  Tech,
-  TechItem,
-  Link,
-  Img,
-  Content,
-} from "./Projects.style";
 
-function Projects({ label, link, preview, info, tech, repo }) {
+import Articles from "../Articles/Articles";
+
+const Projects = ({ projects }) => {
   return (
-    <Item>
-      <Preview>
-        <Title>[ {label} ]</Title>
-        <Img
-          src={preview}
-          alt={label}
-          loading="lazy"
-          width="500"
-          height="300"
-        />
-        <Wrapper>
-          <Link
-            href={repo}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub repository"
-          >
-            <AiFillGithub size="40" />
-          </Link>
-          <Link
-            href={link}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Live page"
-          >
-            <FiExternalLink size="40" />
-          </Link>
-        </Wrapper>
-      </Preview>
-      <Content>
-        <Info>/ {info}</Info>
-        <Tech>
-          {tech.map(({ id, name }) => (
-            <TechItem key={id}>{name}</TechItem>
-          ))}
-        </Tech>
-      </Content>
-    </Item>
+    <ul>
+      {projects
+        // .filter((item) => item.category_id === "1")
+        .map((item) => (
+          <Articles key={item.id} data={item} />
+        ))}
+    </ul>
   );
-}
+};
 
 Projects.propTypes = {
-  info: propTypes.string,
-  label: propTypes.string,
-  link: propTypes.string,
-  preview: propTypes.string,
-  repo: propTypes.string,
-  tech: propTypes.arrayOf(
+  projects: propTypes.arrayOf(
     propTypes.shape({
       id: propTypes.string.isRequired,
-      name: propTypes.string,
+      title: propTypes.string,
+      date: propTypes.string,
+      image: propTypes.string,
+      category_id: propTypes.string,
+      description: propTypes.string,
+      title_block1_content1: propTypes.string,
+      block1_content1: propTypes.string,
+      title_block1_content2: propTypes.string,
+      block1_content2: propTypes.string,
+      title_block1_content3: propTypes.string,
+      block1_content3: propTypes.string,
+      title_block1_content4: propTypes.string,
+      block1_content4: propTypes.string,
     })
   ),
 };
