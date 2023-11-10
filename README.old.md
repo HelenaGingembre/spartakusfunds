@@ -1,1 +1,1 @@
-# spartakusfunds
+# spartacusfunds
