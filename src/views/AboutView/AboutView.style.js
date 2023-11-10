@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+export const SectionAbout = styled.section`
+  padding: 5% 5% 5% 5%;
+`;
 export const Title = styled.h2`
   font-size: 2em;
   text-transform: uppercase;
@@ -10,7 +13,7 @@ export const SubTitle = styled.h3`
   margin-bottom: 20px;
 `;
 
-export const TextJustify = styled.div`
+export const SubText = styled.p`
   text-align: justify;
   margin-bottom: 20px;
 `;

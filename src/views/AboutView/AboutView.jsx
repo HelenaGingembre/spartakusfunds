@@ -1,16 +1,16 @@
-import { Title, TextJustify, SubTitle } from "./AboutView.style";
+import { Title, SubTitle, SectionAbout, SubText } from "./AboutView.style";
 
 const AboutView = () => {
   return (
-    <section id="about" class="content">
+    <SectionAbout id="about">
       <Title>About us </Title>
-      <TextJustify>
+      <SubText>
         Our manager has more than 10 years of experience in financial markets,
         having worked on the trading floor of a leading global bank and for a
         $20bn value oriented investment fund.
-      </TextJustify>
+      </SubText>
       <SubTitle>OUR MANAGER</SubTitle>
-      <TextJustify>
+      <SubText>
         He holds of Bachelor of Commerce from McGill University in Montreal, and
         he received a Master in Finance from London Business School. He is also
         a CFA charterholder. He started his career on the equity trading floor
@@ -19,9 +19,9 @@ const AboutView = () => {
         Advisory, and covered Japanese equity, working directly with billionaire
         investor Allan Gray. In 2010, he left Orbis in order to manage his own
         funds.
-      </TextJustify>
+      </SubText>
       <SubTitle>OUR PHILOSOPHY</SubTitle>
-      <TextJustify>
+      <SubText>
         We have decided to manage our own capital, despite our relatively small
         size, because our experience with various banks and professional money
         managers has shown us that entities that accept third party funds are
@@ -37,8 +37,8 @@ const AboutView = () => {
         people's financial independence. Our manager is giving annual sessions
         at London Business School about investing. Should you be interested,
         please contact us and we will be happy to discuss your specific needs.
-      </TextJustify>
-    </section>
+      </SubText>
+    </SectionAbout>
   );
 };
 export default AboutView;

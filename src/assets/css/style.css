@@ -19,10 +19,10 @@
 16. Responsive layout
  */
 
-html {
-  height: 100%; /*має ростягнути сайт на 100% висоти*/
-}
-
+/* html {
+  height: 100%; /*має ростягнути сайт на 100% висоти
+} */
+/* 
 body {
   margin: 0;
   padding: 0;
@@ -31,7 +31,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   height: 100%;
-}
+} 
 
 *,
 *:before,
@@ -40,7 +40,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+*/
 /* h1 {
   font-size: 2.5em;
   text-align: center;
@@ -169,14 +169,15 @@ input[type="submit"]:hover,
 .container {
   width: 100%;
 }
-.nav > li > a:hover,
+/* .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
   background: none;
-}
+} */
 /********************
 *****3.1. nav .main-nav***
 *********************/
+/*
 .logo-img {
   width: 25%;
   float: left;
@@ -266,7 +267,7 @@ ul.navbar-nav li:hover a:before {
 .navbar-inverse .navbar-toggle:focus {
   background-color: rgba(20, 104, 168, 1);
   border-color: rgba(20, 104, 168, 1);
-}
+}*/
 /********************
 *****4. Wrapper*********
 *******************
@@ -289,10 +290,11 @@ body {
     "advertise"
     "footer";
 }*/
-.main-head {
+/* .main-head {
   grid-area: header;
   z-index: 999;
-}
+} */
+/*
 .content {
   grid-area: content;
   background: #ffffff;
@@ -301,7 +303,7 @@ body {
   display: grid;
   -ms-grid-columns: auto;
   grid-template-columns: auto;
-}
+}*/
 /* .side {
   grid-area: sidebar;
 }
@@ -387,7 +389,7 @@ section.news {
 *****8. Section Contact, about, site-login*******
 **********************/
 section#contact,
-section#about,
+/* section#about, */
 section#site-login,
 section#admin-template {
   padding: 5% 5% 5% 5%;
@@ -402,7 +404,7 @@ section#admin-template {
   height: auto;
 }
 /*******8.1. Contat form**********/
-.contact-form {
+/*.contact-form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 45% auto;
@@ -421,7 +423,8 @@ section#admin-template {
 #map iframe {
   width: 100%;
   height: 100%;
-}
+}*/
+/*
 input[type="text"],
 select,
 textarea,
@@ -446,6 +449,7 @@ textarea.form-control {
 .form-group {
   margin: 1%;
 }
+*/
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,7 +586,7 @@ nav.footernav ul {
   display: -ms-flexbox;
   display: flex;
   float: none;
-}*/
+}
 .footer-end {
   width: 100vw;
   -webkit-box-pack: justify;

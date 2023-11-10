@@ -77,7 +77,6 @@ export const FooterNav = styled.nav`
   }
 `;
 export const FooterEnd = styled.div`
-  //color: ${(p) => p.theme.colors.accent};
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -86,5 +85,6 @@ export const FooterEnd = styled.div`
   padding: 20px;
   @media (max-width: 769px) {
     flex-wrap: wrap;
+    justify-content: center;
   }
 `;

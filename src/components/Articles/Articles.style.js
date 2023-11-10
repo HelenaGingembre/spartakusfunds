@@ -4,48 +4,40 @@ export const Item = styled.li`
   margin-bottom: 10px;
 `;
 
-export const Preview = styled.div`
+export const LogoContainer = styled.div`
   overflow: hidden;
-  box-shadow: ${(p) => p.theme.shadows};
-  border-radius: 4px;
+  width: 15%;
+  margin: 0 auto;
+  @media (max-width: 750px) {
+    width: 30%;
+  }
 `;
 
 export const Img = styled.img`
   display: block;
-`;
-
-export const Wrapper = styled.div`
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
 `;
 
 export const Title = styled.h2`
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 1.2em;
   text-transform: uppercase;
-  background-color: ${(p) => p.theme.colors.text.primary};
+  background-color: ${(p) => p.theme.colors.bg_black};
   color: ${(p) => p.theme.colors.white};
 `;
-
+export const TimeBox = styled.div`
+  color: ${(p) => p.theme.colors.accent};
+  padding: 20px;
+`;
+export const SubTitle = styled.h3`
+  padding: 20px;
+`;
+export const SubText = styled.p`
+  text-align: justify;
+`;
 export const Content = styled.div`
   padding: 15px 30px;
-`;
-
-export const Info = styled.p`
-  margin-bottom: 20px;
-  font-size: 20px;
-  color: ${(p) => p.theme.colors.text.secondary};
-`;
-
-export const Tech = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 `;

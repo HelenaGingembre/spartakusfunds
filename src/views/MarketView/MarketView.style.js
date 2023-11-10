@@ -10,7 +10,7 @@ export const Title = styled.h1`
 `;
 
 export const SingleImgDiv = styled.div`
-  width: "100%";
+  width: 100%;
   padding: 15% 5%;
   background-image: url(${market});
   background-size: cover;

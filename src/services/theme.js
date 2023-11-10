@@ -3,8 +3,10 @@ export const theme = {
     background: "rgba(218, 237, 255, 1)",
     bg_header: "rgba(6, 28, 70, 0.8)",
     bg_footer: "rgba(6, 33, 52, 1)",
-    black: "#111111",
+    black: "rgba(17, 17, 17, 1)",
+    bg_black: "rgba(40, 44, 52, 1)",
     gray: "#cccccc",
+    gray_transparent: "rgb(204 204 204 / 50%)",
     white: "#FFFFFF",
     accent: "rgba(20, 104, 168, 1)",
     accentHover: "rgba(20, 104, 168, 0.5)",
@@ -14,7 +16,7 @@ export const theme = {
     gradient: "linear-gradient(90deg, #FF634E 0%, #FFDF48 105.44%)",
 
     text: {
-      primary: "#111111",
+      primary: "rgba(17, 17, 17, 1)",
       secondary: "#111321",
       gray: "rgba(17, 17, 17, 0.6)",
     },

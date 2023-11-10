@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  position: relative;
+  // position: relative;
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
+  height: 80px;
   padding: 0 20px;
   background: ${(p) => p.theme.colors.bg_header};
   border-bottom: 1px solid ${(p) => p.theme.colors.accent};

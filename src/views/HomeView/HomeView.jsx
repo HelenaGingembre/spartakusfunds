@@ -1,4 +1,4 @@
-import articles from "../../services/article.json";
+//import articles from "../../services/article.json";
 import News from "../../components/News/News";
 // import TechSkills from "../../components/TechSkills";
 // import Contacts from "../../components/Contacts";
@@ -15,7 +15,8 @@ import {
 } from "./HomeView.style";
 import Aside from "../../components/Aside/Aside";
 
-const HomeView = () => {
+const HomeView = ({ data }) => {
+  console.log("data in homeview", data);
   return (
     <>
       <Wrapper>
@@ -28,32 +29,18 @@ const HomeView = () => {
                 and Down Markets
               </SliderText>
 
-              {/* <button class="btn"> */}
               <BtnLink href="#news" rel="noopener noreferrer">
                 Learn more
               </BtnLink>
-              {/* </button> */}
             </BoxCenter>
           </SliderSection>
         </Flex>
       </Wrapper>
 
-      <News articles={articles} />
+      <News articles={data} />
       <Aside />
     </>
   );
 };
-
-// <SubTitle>[ Tech Skills_ ]</SubTitle>
-//     <List>
-//       {/* {techSkills.map(({ id, label, icon }) => (
-//         <TechSkills key={id} label={label} icon={icon} />
-//       ))} */}
-//    </List>
-//   <SubTitle>[ Contacts_ ]</SubTitle>
-//     {/* <Contacts /> */}
-// HomeView.propTypes = {
-//   techSkills: PropTypes.arrayOf(PropTypes.object),
-// };
 
 export default HomeView;

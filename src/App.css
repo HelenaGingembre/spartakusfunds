@@ -42,41 +42,117 @@
 ********************/
 @-webkit-keyframes slide {
   0% {
-    background-image: url("./assets/images/equity.jpg");
+    background-image: url("../public/images/equity.jpg");
   }
   33% {
-    background-image: url("./assets/images/equity.jpg");
+    background-image: url("../public/images/fixed-income.jpeg");
   }
-  33.01% {
-    background-image: url("./assets/images/fixed-income.jpg");
+  33.1% {
+    background-image: url("../public/images/fixed-income.jpeg");
   }
   66% {
-    background-image: url("./assets/images/fixed-income.jpg");
+    background-image: url("../public/images/oil.jpg");
   }
-  66.01% {
-    background-image: url("./assets/images/priv-equity.jpg");
+  66.1% {
+    background-image: url("../public/images/oil.jpg");
+  }
+  80% {
+    background-image: url("../public/images/priv-equity.jpg");
+  }
+  80.1% {
+    background-image: url("../public/images/priv-equity.jpg");
+  }
+  99% {
+    background-image: url("../public/images/equity.jpg");
+  }
+  99.1% {
+    background-image: url("../public/images/equity.jpg");
   }
   100% {
-    background-image: url("./assets/images/priv-equity.jpg");
+    background-image: url("../public/images/equity.jpg");
   }
 }
 @keyframes slide {
   0% {
-    background-image: url("./assets/images/equity.jpg");
+    background-image: url("../public/images/equity.jpg");
   }
   33% {
-    background-image: url("./assets/images/equity.jpg");
+    background-image: url("../public/images/fixed-income.jpeg");
   }
-  33.01% {
-    background-image: url("./assets/images/fixed-income.jpg");
+  33.1% {
+    background-image: url("../public/images/fixed-income.jpeg");
   }
   66% {
-    background-image: url("./assets/images/fixed-income.jpg");
+    background-image: url("../public/images/oil.jpg");
   }
-  66.01% {
-    background-image: url("./assets/images/priv-equity.jpg");
+  66.1% {
+    background-image: url("../public/images/oil.jpg");
+  }
+  80% {
+    background-image: url("../public/images/priv-equity.jpg");
+  }
+  80.1% {
+    background-image: url("../public/images/priv-equity.jpg");
+  }
+  99% {
+    background-image: url("../public/images/equity.jpg");
+  }
+  99.1% {
+    background-image: url("../public/images/equity.jpg");
   }
   100% {
-    background-image: url("./assets/images/priv-equity.jpg");
+    background-image: url("../public/images/equity.jpg");
   }
+}
+
+/*******************ContactForm*******************/
+.contact-form {
+  width: 50%;
+  padding: 1%;
+}
+#map {
+  padding: 1%;
+}
+#map iframe {
+  height: 100%;
+  width: 388px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 901px) {
+  .contact-form {
+    width: 100%;
+  }
+  #map {
+    visibility: hidden;
+    display: none;
+  }
+}
+input[type="text"],
+input[type="email"],
+select,
+.contact-form textarea {
+  width: 100%;
+  padding: 1%;
+  background: rgba(218, 237, 255, 1);
+  border: 1px solid rgba(20, 104, 168, 1);
+  border-radius: 5px;
+  margin: 20px 0 0 0;
+  resize: vertical;
+}
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+.contact-form textarea:hover,
+.contact-form textarea:focus,
+select:hover,
+select:focus,
+textarea:hover,
+textarea:hover {
+  -webkit-box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #fff;
+}
+.contact-form textarea,
+input[type="textarea"] {
+  height: 15vh;
 }

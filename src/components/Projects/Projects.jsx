@@ -1,15 +1,18 @@
 import propTypes from "prop-types";
+import { nanoid } from "nanoid";
 
 import Articles from "../Articles/Articles";
 
 const Projects = ({ projects }) => {
   return (
     <ul>
-      {projects
-        // .filter((item) => item.category_id === "1")
-        .map((item) => (
-          <Articles key={item.id} data={item} />
-        ))}
+      {projects.length > 0 ? (
+        projects
+          .filter((item) => item.category_id === "2")
+          .map((item) => <Articles key={item.id + nanoid(6)} data={item} />)
+      ) : (
+        <h4>There are no articles yet</h4>
+      )}
     </ul>
   );
 };

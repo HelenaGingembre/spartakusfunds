@@ -7,7 +7,7 @@ import App from "./App";
 
 import "modern-normalize";
 import "./index.css";
-import "../src/assets/css/style-category.css";
+//import "../src/assets/css/style-category.css";
 // import "../src/assets/css/style-grid-home.css";
 import "../src/assets/css/style.css";
 

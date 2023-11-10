@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import {
   Title,
   SingleImgDiv,
@@ -6,15 +7,15 @@ import {
   JustifyText,
   IntroText,
 } from "./MarketView.style";
-import data from "../../services/article.json";
+
 import Articles from "../../components/Articles/Articles";
 
-const MarketView = () => {
+const MarketView = ({ data }) => {
   return (
     <section>
-      <SingleImgDiv class="single-img">
-        <ContentIntro class="content-intro center">
-          <Title class="top">Market Views</Title>
+      <SingleImgDiv>
+        <ContentIntro>
+          <Title>Market Views</Title>
           <IntroText>Our View on Current Markets</IntroText>
         </ContentIntro>
       </SingleImgDiv>
@@ -27,15 +28,15 @@ const MarketView = () => {
           Do not hesitate to get in touch to share with us your views/comments.
         </JustifyText>
 
-        <div class="content-tab">
-          <ul>
-            {data
+        <ul>
+          {data.length > 0 ? (
+            data
               .filter((item) => item.category_id === "1")
-              .map((item) => (
-                <Articles key={item.id} data={item} />
-              ))}
-          </ul>
-        </div>
+              .map((item) => <Articles key={item.id + nanoid(6)} data={item} />)
+          ) : (
+            <h4>There are no articles yet</h4>
+          )}
+        </ul>
       </SingleContent>
     </section>
   );

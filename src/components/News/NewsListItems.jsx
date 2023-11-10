@@ -1,5 +1,6 @@
 import {
   NewsListItem,
+  BoxTitle,
   TitleListItem,
   BoxImg,
   PostContent,
@@ -7,17 +8,20 @@ import {
   LinkPostNews,
 } from "./News.style";
 
-const NewsListItems = ({ item }) => {
+const NewsListItems = ({ item, key }) => {
+  const { image, title, description } = item;
   return (
-    <NewsListItem id={item.id}>
+    <NewsListItem key={key}>
       <BoxImg>
-        <ImgListItem src={item.image} />
-        <TitleListItem>{item.title}</TitleListItem>
+        <ImgListItem src={image} />
+        <BoxTitle>
+          <TitleListItem>{title}</TitleListItem>
+        </BoxTitle>
       </BoxImg>
 
       <PostContent>
         <LinkPostNews href="#" target="_blank" rel="noopener noreferrer">
-          {item.description}
+          {description}
         </LinkPostNews>
       </PostContent>
     </NewsListItem>

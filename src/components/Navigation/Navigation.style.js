@@ -21,22 +21,33 @@ export const MenuBtn = styled.div`
 
 export const Nav = styled.nav`
   @media (max-width: 750px) {
-    position: absolute;
-    top: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
     left: 0;
+    top: 80px;
     width: 100%;
-    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
     padding: 60px;
     transition: opacity 250ms ${(p) => p.theme.transition};
     opacity: ${({ menuToggle }) => (menuToggle ? 1 : 0)};
     pointer-events: ${({ menuToggle }) => (menuToggle ? "painted" : "none")};
-    background-color: ${(p) => p.theme.colors.white};
-    text-align: center;
+    background-color: ${(p) => p.theme.colors.bg_header};
+    color: ${(p) => p.theme.colors.white};
+
     border-top: 1px solid ${(p) => p.theme.colors.accent};
   }
   @media (min-width: 750px) {
     display: flex;
     align-items: center;
+    ul {
+      display: flex;
+      padding-left: 10px;
+    }
   }
 `;
 

@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import NewsListItems from "./NewsListItems";
 import {
   BoxCenter,
@@ -15,7 +16,7 @@ const News = ({ articles }) => {
       {articles.length > 0 ? (
         <NewsListBox>
           {articles.map((article) => (
-            <NewsListItems item={article} key={article.id} />
+            <NewsListItems item={article} key={article.id + nanoid(6)} />
           ))}
         </NewsListBox>
       ) : (

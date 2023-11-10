@@ -19,22 +19,33 @@ const Navigation = () => {
         )}
       </MenuBtn>
       <Nav menuToggle={isOpenMenu}>
-        <Link exact to="/" onClick={menuToggle}>
-          Home
-        </Link>
-
-        <Link to="/projects" onClick={menuToggle}>
-          Investment Philosophy
-        </Link>
-        <Link to="/market" onClick={menuToggle}>
-          Market
-        </Link>
-        <Link to="/about" onClick={menuToggle}>
-          About Us
-        </Link>
-        <Link to="/contact" onClick={menuToggle}>
-          Contact
-        </Link>
+        <ul>
+          <li>
+            <Link exact to="/" onClick={menuToggle}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/projects" onClick={menuToggle}>
+              Investment Philosophy
+            </Link>
+          </li>
+          <li>
+            <Link to="/market" onClick={menuToggle}>
+              Market
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={menuToggle}>
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={menuToggle}>
+              Contact
+            </Link>
+          </li>
+        </ul>
       </Nav>
     </>
   );

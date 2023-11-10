@@ -57,17 +57,23 @@ export const BoxImg = styled.div`
 export const ImgListItem = styled.img`
   background-color: ${(p) => p.theme.colors.gray};
   display: block;
-  width: 100%;
+  height: 100%;
   margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 `;
-
-export const TitleListItem = styled.h3`
+export const BoxTitle = styled.div`
+  background: ${(p) => p.theme.colors.gray_transparent};
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
+  padding: 5%;
+  border-radius: 5px;
+`;
+export const TitleListItem = styled.h3`
   font-weight: 700;
   font-size: ${(p) => p.theme.fontSizes.m};
   line-height: 1.14;
