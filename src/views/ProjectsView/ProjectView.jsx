@@ -1,12 +1,13 @@
 import Projects from "../../components/Projects";
 
 import data from "../../services/article.json";
+import { SectionProjects } from "./ProjectView.style";
 
 function ProjectsView() {
   return (
-    <section>
+    <SectionProjects>
       <Projects projects={data} />
-    </section>
+    </SectionProjects>
   );
 }
 

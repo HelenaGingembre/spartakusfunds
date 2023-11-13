@@ -9,7 +9,7 @@ import {
 } from "./News.style";
 
 const NewsListItems = ({ item, key }) => {
-  const { image, title, description } = item;
+  const { id, image, title, description } = item;
   return (
     <NewsListItem key={key}>
       <BoxImg>
