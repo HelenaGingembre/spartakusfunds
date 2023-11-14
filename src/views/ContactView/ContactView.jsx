@@ -5,7 +5,7 @@ import {
   JustifyBox,
   MapBox,
 } from "./ContactView.style";
-import ContactForm from "./Form";
+import FormContact from "../../components/FormContact";
 
 const ContactView = () => {
   const sendEmail = (newEmail) => {
@@ -22,7 +22,8 @@ const ContactView = () => {
         you and will get back to you shortly.
       </JustifyBox>
       <FormContainer>
-        <ContactForm onSubmit={sendEmail} />
+        <FormContact onSubmit={sendEmail} />
+
         <MapBox id="map">
           <iframe
             title=" Contacts SpartacusPartners"

@@ -1,8 +1,6 @@
 //import articles from "../../services/article.json";
 import News from "../../components/News/News";
-// import TechSkills from "../../components/TechSkills";
-// import Contacts from "../../components/Contacts";
-//import photoSpartac from "../../assets/images/fixed-income.jpg";
+
 // import PropTypes from "prop-types";
 import {
   Wrapper,
@@ -16,7 +14,7 @@ import {
 import Aside from "../../components/Aside/Aside";
 
 const HomeView = ({ data }) => {
-  console.log("data in homeview", data);
+  // console.log("data in homeview", data);
   return (
     <>
       <Wrapper>

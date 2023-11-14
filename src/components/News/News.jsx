@@ -9,7 +9,7 @@ import {
 } from "./News.style";
 
 const News = ({ articles }) => {
-  console.log("news articles:  ", articles);
+  // console.log("news articles:  ", articles);
   return (
     <Section id="news">
       <Title>News</Title>

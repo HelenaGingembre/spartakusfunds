@@ -11,7 +11,7 @@ import {
 const NewsListItems = ({ item, key }) => {
   const { image, title, description } = item;
   return (
-    <NewsListItem key={key} href="#{title}">
+    <NewsListItem key={key}>
       <BoxImg>
         <ImgListItem src={image} />
         <BoxTitle>
@@ -20,7 +20,11 @@ const NewsListItems = ({ item, key }) => {
       </BoxImg>
 
       <PostContent>
-        <LinkPostNews href="#" target="_blank" rel="noopener noreferrer">
+        <LinkPostNews
+          href={`#` + title}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {description}
         </LinkPostNews>
       </PostContent>

@@ -6,9 +6,9 @@ import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
-import { BoxError, BtnForm } from "./ContactView.style";
+import { BoxError, BtnForm } from "../../views/ContactView/ContactView.style";
 
-const ContactForm = ({ onSubmit }) => {
+const FormContact = ({ onSubmit }) => {
   const [disabled, setDisabled] = useState(false);
   const form = useRef();
 
@@ -42,7 +42,7 @@ const ContactForm = ({ onSubmit }) => {
         `Hello ${firstName} ${lastName} Your email with the  message -  has been sent. Wait for the answer in the near future`
       );
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       // Display error alert
       toast.error(`Error! Uh oh. Something went wrong. `);
     } finally {
@@ -152,9 +152,9 @@ const ContactForm = ({ onSubmit }) => {
     </Formik>
   );
 };
-export default ContactForm;
+export default FormContact;
 
-ContactForm.propType = {
+FormContact.propType = {
   value: PropTypes.shape({
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
