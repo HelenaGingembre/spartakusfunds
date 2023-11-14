@@ -10,11 +10,12 @@ import {
   FooterEnd,
 } from "./Footer.style";
 import { theme } from "../../services/theme";
+import logo from "../../assets/images/logo.jpg";
 
 const Footer = () => {
   return (
     <MainFooter>
-      <ImgFooter src="logo.jpg" alt="Spartacus Partners Logo" />
+      <ImgFooter src={logo} alt="Spartacus Partners Logo" />
 
       <FooterStart>
         <FooterNav>

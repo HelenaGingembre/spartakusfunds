@@ -31,7 +31,7 @@ const Articles = ({ data, key }) => {
   } = data;
 
   return (
-    <Item key={key}>
+    <Item key={key} id={title}>
       <LogoContainer>
         <Img src={logo} alt="Logo spartacus" />
       </LogoContainer>

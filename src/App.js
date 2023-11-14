@@ -7,6 +7,8 @@ import "./App.css";
 import initialArticles from "./services/article.json";
 import { useState } from "react";
 import { useEffect } from "react";
+import Articles from "./components/Articles/Articles";
+import SubMenu from "./components/Navigation/SubMenu";
 
 const HomeView = lazy(() => import("./views/HomeView"));
 const ProjectsView = lazy(() => import("./views/ProjectsView"));
@@ -27,10 +29,12 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomeView data={articles} />} />
 
-          <Route
-            path="/projects"
-            element={<ProjectsView data={articles} />}
-          ></Route>
+          <Route path="/projects" element={<ProjectsView data={articles} />}>
+            <Route
+              path="/projects/"
+              element={<SubMenu articles={articles} />}
+            ></Route>
+          </Route>
           <Route
             path="/market"
             element={<MarketView data={articles} />}
