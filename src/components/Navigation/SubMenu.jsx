@@ -1,14 +1,15 @@
 //import { nanoid } from "nanoid";
 
+import { getCategory } from "../../services/helpers";
 import { Link } from "./Navigation.style";
 
-const SubMenu = ({ articles }) => {
+const SubMenu = ({ data }) => {
   return (
     <div>
       <ul>
-        {articles.map((article) => (
+        {data.map((article) => (
           <li>
-            <Link exact to={"/" + article.title}>
+            <Link exact to={getCategory(article.category_id) + article.title}>
               {article.title}
             </Link>
           </li>

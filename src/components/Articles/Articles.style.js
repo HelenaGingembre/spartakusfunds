@@ -18,6 +18,22 @@ export const Img = styled.img`
   margin: 0 auto;
 `;
 
+export const LinkPost = styled.a`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  background-color: transparent;
+  color: ${(p) => p.theme.colors.white};
+
+  height: 100%;
+  width: 100%;
+  :hover,
+  :focus {
+    color: ${(p) => p.theme.colors.accent};
+  }
+`;
+
 export const Title = styled.h2`
   width: 100%;
   display: inline-block;

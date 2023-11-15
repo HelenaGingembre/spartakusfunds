@@ -1,4 +1,7 @@
 import { nanoid } from "nanoid";
+import propTypes from "prop-types";
+import Articles from "../../components/Articles/Articles";
+
 import {
   Title,
   SingleImgDiv,
@@ -7,8 +10,6 @@ import {
   JustifyText,
   IntroText,
 } from "./MarketView.style";
-
-import Articles from "../../components/Articles/Articles";
 
 const MarketView = ({ data }) => {
   return (
@@ -42,3 +43,24 @@ const MarketView = ({ data }) => {
   );
 };
 export default MarketView;
+
+MarketView.propTypes = {
+  data: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      title: propTypes.string,
+      date: propTypes.string,
+      image: propTypes.string,
+      category_id: propTypes.string,
+      description: propTypes.string,
+      title_block1_content1: propTypes.string,
+      block1_content1: propTypes.string,
+      title_block1_content2: propTypes.string,
+      block1_content2: propTypes.string,
+      title_block1_content3: propTypes.string,
+      block1_content3: propTypes.string,
+      title_block1_content4: propTypes.string,
+      block1_content4: propTypes.string,
+    })
+  ),
+};

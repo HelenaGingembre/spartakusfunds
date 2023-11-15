@@ -1,9 +1,11 @@
 import propTypes from "prop-types";
 import logo from "../../assets/images/logo.jpg";
+import { getCategory } from "../../services/helpers";
 
 import {
   Item,
   LogoContainer,
+  LinkPost,
   Title,
   Img,
   Content,
@@ -12,13 +14,13 @@ import {
   SubText,
 } from "./Articles.style";
 
-const Articles = ({ data, key }) => {
+const Articles = ({ data }) => {
   const {
     id,
     title,
     date,
     image,
-    // category_id,
+    category_id,
     description,
     title_block1_content1,
     block1_content1,
@@ -31,12 +33,20 @@ const Articles = ({ data, key }) => {
   } = data;
 
   return (
-    <Item key={key} id={title}>
+    <Item id={title}>
       <LogoContainer>
         <Img src={logo} alt="Logo spartacus" />
       </LogoContainer>
-      {/* <Img src={image} alt={title}></Img> */}
-      <Title> {title} </Title>
+
+      <Title>
+        <LinkPost
+          href={getCategory(category_id) + title.toLowerCase()}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {title}
+        </LinkPost>
+      </Title>
 
       <TimeBox>{date}</TimeBox>
       <Content>
@@ -55,24 +65,22 @@ const Articles = ({ data, key }) => {
 };
 
 Articles.propTypes = {
-  data: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.string.isRequired,
-      title: propTypes.string,
-      date: propTypes.string,
-      image: propTypes.string,
-      category_id: propTypes.string,
-      description: propTypes.string,
-      title_block1_content1: propTypes.string,
-      block1_content1: propTypes.string,
-      title_block1_content2: propTypes.string,
-      block1_content2: propTypes.string,
-      title_block1_content3: propTypes.string,
-      block1_content3: propTypes.string,
-      title_block1_content4: propTypes.string,
-      block1_content4: propTypes.string,
-    })
-  ),
+  data: propTypes.shape({
+    id: propTypes.string.isRequired,
+    title: propTypes.string,
+    date: propTypes.string,
+    image: propTypes.string,
+    category_id: propTypes.string,
+    description: propTypes.string,
+    title_block1_content1: propTypes.string,
+    block1_content1: propTypes.string,
+    title_block1_content2: propTypes.string,
+    block1_content2: propTypes.string,
+    title_block1_content3: propTypes.string,
+    block1_content3: propTypes.string,
+    title_block1_content4: propTypes.string,
+    block1_content4: propTypes.string,
+  }),
 };
 
 export default Articles;

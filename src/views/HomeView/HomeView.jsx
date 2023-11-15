@@ -1,7 +1,7 @@
-//import articles from "../../services/article.json";
 import News from "../../components/News/News";
+import Aside from "../../components/Aside/Aside";
+import propTypes from "prop-types";
 
-// import PropTypes from "prop-types";
 import {
   Wrapper,
   Flex,
@@ -11,10 +11,9 @@ import {
   SliderText,
   BtnLink,
 } from "./HomeView.style";
-import Aside from "../../components/Aside/Aside";
 
 const HomeView = ({ data }) => {
-  // console.log("data in homeview", data);
+  console.log("news data--->", data);
   return (
     <>
       <Wrapper>
@@ -35,10 +34,31 @@ const HomeView = ({ data }) => {
         </Flex>
       </Wrapper>
 
-      <News articles={data} />
+      <News data={data} />
       <Aside />
     </>
   );
 };
 
 export default HomeView;
+
+HomeView.propTypes = {
+  data: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      title: propTypes.string,
+      date: propTypes.string,
+      image: propTypes.string,
+      category_id: propTypes.string,
+      description: propTypes.string,
+      title_block1_content1: propTypes.string,
+      block1_content1: propTypes.string,
+      title_block1_content2: propTypes.string,
+      block1_content2: propTypes.string,
+      title_block1_content3: propTypes.string,
+      block1_content3: propTypes.string,
+      title_block1_content4: propTypes.string,
+      block1_content4: propTypes.string,
+    })
+  ),
+};

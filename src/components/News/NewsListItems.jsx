@@ -1,3 +1,4 @@
+import { getCategory } from "../../services/helpers";
 import {
   NewsListItem,
   BoxTitle,
@@ -8,10 +9,18 @@ import {
   LinkPostNews,
 } from "./News.style";
 
-const NewsListItems = ({ item, key }) => {
-  const { image, title, description } = item;
+const NewsListItems = ({ item }) => {
+  const { image, title, description, category_id } = item;
+  //console.log("item----->", item);
+  //console.log("key----->", key);
+  // const getCategory = (itemCategory) => {
+  //   const result = itemCategory === "2" ? "/projects/" : "/market/";
+
+  //   return result;
+  // };
+
   return (
-    <NewsListItem key={key}>
+    <NewsListItem>
       <BoxImg>
         <ImgListItem src={image} />
         <BoxTitle>
@@ -21,7 +30,7 @@ const NewsListItems = ({ item, key }) => {
 
       <PostContent>
         <LinkPostNews
-          href={`#` + title}
+          href={getCategory(category_id) + title.toLowerCase()}
           target="_blank"
           rel="noopener noreferrer"
         >
