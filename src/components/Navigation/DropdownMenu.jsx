@@ -3,9 +3,9 @@
 import { getCategory } from "../../services/helpers";
 import { Link } from "./Navigation.style";
 
-const SubMenu = ({ data }) => {
+const DropdownMenu = ({ data }) => {
   return (
-    <div>
+    <div className="dropdown-menu">
       <ul>
         {data.map((article) => (
           <li>
@@ -19,4 +19,4 @@ const SubMenu = ({ data }) => {
   );
 };
 
-export default SubMenu;
+export default DropdownMenu;

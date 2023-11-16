@@ -9,12 +9,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 //import Articles from "./components/Articles/Articles";
-import SubMenu from "./components/Navigation/SubMenu";
-import {
-  getArticleById,
-  // getArticleByTitle,
-  getArticles,
-} from "./services/serviceApi";
+
+import { getArticles } from "./services/serviceApi";
 
 const HomeView = lazy(() => import("./views/HomeView"));
 const ProjectsView = lazy(() => import("./views/ProjectsView"));
