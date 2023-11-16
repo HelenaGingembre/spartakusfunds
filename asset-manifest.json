@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/spartakusfunds/static/css/main.ec6c1dfb.css",
+    "main.js": "/spartakusfunds/static/js/main.879ecfe1.js",
+    "static/js/529.07bcc403.chunk.js": "/spartakusfunds/static/js/529.07bcc403.chunk.js",
+    "static/js/836.becfd445.chunk.js": "/spartakusfunds/static/js/836.becfd445.chunk.js",
+    "static/js/842.742716fe.chunk.js": "/spartakusfunds/static/js/842.742716fe.chunk.js",
+    "static/js/625.08761da8.chunk.js": "/spartakusfunds/static/js/625.08761da8.chunk.js",
+    "static/js/297.a853a9dd.chunk.js": "/spartakusfunds/static/js/297.a853a9dd.chunk.js",
+    "static/js/82.6b39850c.chunk.js": "/spartakusfunds/static/js/82.6b39850c.chunk.js",
+    "static/js/330.5b287659.chunk.js": "/spartakusfunds/static/js/330.5b287659.chunk.js",
+    "static/js/787.bae0f22b.chunk.js": "/spartakusfunds/static/js/787.bae0f22b.chunk.js",
+    "static/css/544.7c3dd9d6.chunk.css": "/spartakusfunds/static/css/544.7c3dd9d6.chunk.css",
+    "static/media/fixed-income.jpeg": "/spartakusfunds/static/media/fixed-income.ea5c291a80a631c88d9b.jpeg",
+    "static/media/priv-equity.jpg": "/spartakusfunds/static/media/priv-equity.3787475330371d457d35.jpg",
+    "static/media/equity.jpg": "/spartakusfunds/static/media/equity.6e16f01e27e24c098e67.jpg",
+    "static/media/market-view.jpg": "/spartakusfunds/static/media/market-view.acb25766d29a04ee092f.jpg",
+    "static/media/oil.jpg": "/spartakusfunds/static/media/oil.08fa4cc3652543d554c5.jpg",
+    "static/media/building.jpg": "/spartakusfunds/static/media/building.50c51fa5f2a1bf653cd9.jpg",
+    "index.html": "/spartakusfunds/index.html",
+    "main.ec6c1dfb.css.map": "/spartakusfunds/static/css/main.ec6c1dfb.css.map",
+    "main.879ecfe1.js.map": "/spartakusfunds/static/js/main.879ecfe1.js.map",
+    "529.07bcc403.chunk.js.map": "/spartakusfunds/static/js/529.07bcc403.chunk.js.map",
+    "836.becfd445.chunk.js.map": "/spartakusfunds/static/js/836.becfd445.chunk.js.map",
+    "842.742716fe.chunk.js.map": "/spartakusfunds/static/js/842.742716fe.chunk.js.map",
+    "625.08761da8.chunk.js.map": "/spartakusfunds/static/js/625.08761da8.chunk.js.map",
+    "297.a853a9dd.chunk.js.map": "/spartakusfunds/static/js/297.a853a9dd.chunk.js.map",
+    "82.6b39850c.chunk.js.map": "/spartakusfunds/static/js/82.6b39850c.chunk.js.map",
+    "330.5b287659.chunk.js.map": "/spartakusfunds/static/js/330.5b287659.chunk.js.map",
+    "787.bae0f22b.chunk.js.map": "/spartakusfunds/static/js/787.bae0f22b.chunk.js.map",
+    "544.7c3dd9d6.chunk.css.map": "/spartakusfunds/static/css/544.7c3dd9d6.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec6c1dfb.css",
+    "static/js/main.879ecfe1.js"
+  ]
+}
