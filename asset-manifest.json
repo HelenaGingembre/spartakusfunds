@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/spartakusfunds/static/css/main.ec6c1dfb.css",
-    "main.js": "/spartakusfunds/static/js/main.879ecfe1.js",
+    "main.js": "/spartakusfunds/static/js/main.47f123b4.js",
     "static/js/529.07bcc403.chunk.js": "/spartakusfunds/static/js/529.07bcc403.chunk.js",
     "static/js/836.becfd445.chunk.js": "/spartakusfunds/static/js/836.becfd445.chunk.js",
     "static/js/842.742716fe.chunk.js": "/spartakusfunds/static/js/842.742716fe.chunk.js",
@@ -19,7 +19,7 @@
     "static/media/building.jpg": "/spartakusfunds/static/media/building.50c51fa5f2a1bf653cd9.jpg",
     "index.html": "/spartakusfunds/index.html",
     "main.ec6c1dfb.css.map": "/spartakusfunds/static/css/main.ec6c1dfb.css.map",
-    "main.879ecfe1.js.map": "/spartakusfunds/static/js/main.879ecfe1.js.map",
+    "main.47f123b4.js.map": "/spartakusfunds/static/js/main.47f123b4.js.map",
     "529.07bcc403.chunk.js.map": "/spartakusfunds/static/js/529.07bcc403.chunk.js.map",
     "836.becfd445.chunk.js.map": "/spartakusfunds/static/js/836.becfd445.chunk.js.map",
     "842.742716fe.chunk.js.map": "/spartakusfunds/static/js/842.742716fe.chunk.js.map",
@@ -32,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.ec6c1dfb.css",
-    "static/js/main.879ecfe1.js"
+    "static/js/main.47f123b4.js"
   ]
 }
