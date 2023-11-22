@@ -37,13 +37,7 @@ const Navigation = () => {
     setIsOpenMenu((prevState) => prevState);
     setDropdownVisibleFirst((prevState) => prevState);
     setDropdownVisibleSecond((prevState) => prevState);
-  }, [
-    articles,
-    isOpenMenu,
-    ref,
-    isDropdownVisibleFirst,
-    isDropdownVisibleSecond,
-  ]);
+  }, [articles, isOpenMenu, isDropdownVisibleFirst, isDropdownVisibleSecond]);
 
   return (
     <>
