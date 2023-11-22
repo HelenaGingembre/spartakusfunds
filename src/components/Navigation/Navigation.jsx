@@ -1,13 +1,49 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
-import { Nav, Link, MenuBtn } from "./Navigation.style";
+import { getArticles } from "../../services/serviceApi";
+import DropdownMenu from "./DropdownMenu";
+import { Nav, Link, MenuBtn, DropdownMenuBox } from "./Navigation.style";
+import SubMenu from "./SubMenu";
 
 const Navigation = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [articles, setArticles] = useState(getArticles());
 
+  let ref = useRef();
+
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const menuToggle = () => {
     setIsOpenMenu((prev) => !prev);
   };
+  const [isDropdownVisibleFirst, setDropdownVisibleFirst] = useState(false);
+
+  const handleMouseEnterFirst = () => {
+    setDropdownVisibleFirst(true);
+  };
+
+  const handleMouseLeaveFirst = () => {
+    setDropdownVisibleFirst(false);
+  };
+  const [isDropdownVisibleSecond, setDropdownVisibleSecond] = useState(false);
+  const handleMouseEnterSecond = () => {
+    setDropdownVisibleSecond(true);
+  };
+
+  const handleMouseLeaveSecond = () => {
+    setDropdownVisibleSecond(false);
+  };
+
+  useEffect(() => {
+    setArticles((prevState) => prevState);
+    setIsOpenMenu((prevState) => prevState);
+    setDropdownVisibleFirst((prevState) => prevState);
+    setDropdownVisibleSecond((prevState) => prevState);
+  }, [
+    articles,
+    isOpenMenu,
+    ref,
+    isDropdownVisibleFirst,
+    isDropdownVisibleSecond,
+  ]);
 
   return (
     <>
@@ -20,27 +56,49 @@ const Navigation = () => {
       </MenuBtn>
       <Nav menuToggle={isOpenMenu}>
         <ul>
-          <li>
+          <li ref={ref}>
             <Link exact to="/" onClick={menuToggle}>
               Home
             </Link>
           </li>
-          <li>
+          <DropdownMenuBox
+            ref={ref}
+            onMouseEnter={handleMouseEnterFirst}
+            onMouseLeave={handleMouseLeaveFirst}
+          >
             <Link to="/projects" onClick={menuToggle}>
               Investment Philosophy
             </Link>
-          </li>
-          <li>
+            {isOpenMenu ? (
+              <SubMenu data={articles} category="2" />
+            ) : (
+              isDropdownVisibleFirst && (
+                <DropdownMenu data={articles} category="2" />
+              )
+            )}
+          </DropdownMenuBox>
+          <DropdownMenuBox
+            ref={ref}
+            onMouseEnter={handleMouseEnterSecond}
+            onMouseLeave={handleMouseLeaveSecond}
+          >
             <Link to="/market" onClick={menuToggle}>
               Market
             </Link>
-          </li>
-          <li>
+            {isOpenMenu ? (
+              <SubMenu data={articles} category="1" />
+            ) : (
+              isDropdownVisibleSecond && (
+                <DropdownMenu data={articles} category="1" />
+              )
+            )}
+          </DropdownMenuBox>
+          <li ref={ref}>
             <Link to="/about" onClick={menuToggle}>
               About Us
             </Link>
           </li>
-          <li>
+          <li ref={ref}>
             <Link to="/contact" onClick={menuToggle}>
               Contact
             </Link>

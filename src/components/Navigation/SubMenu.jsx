@@ -1,33 +1,29 @@
 import propTypes from "prop-types";
-// import { nanoid } from "nanoid";
 
 import { getCategory } from "../../services/helpers";
-import {
-  DropdownMenuLi,
-  DropdownMenuUl,
-  DropdownLink,
-} from "./DropdownMenu.style";
-//import { Link } from "./Navigation.style";
+import { SubMenuLi, SubMenuUl, SubMenuLink } from "./SubMenu.style";
 
-const DropdownMenu = ({ data, category }) => {
+const SubMenu = ({ data, category }) => {
+  // const res = data.filter((article) => category === article.category_id);
+
   return (
-    <DropdownMenuUl>
+    <SubMenuUl>
       {data
         .filter((article) => category === article.category_id)
         .map((article) => (
-          <DropdownMenuLi>
-            <DropdownLink exact to={getCategory(category) + article.title}>
+          <SubMenuLi>
+            <SubMenuLink exact to={getCategory(category) + article.title}>
               {article.title}
-            </DropdownLink>
-          </DropdownMenuLi>
+            </SubMenuLink>
+          </SubMenuLi>
         ))}
-    </DropdownMenuUl>
+    </SubMenuUl>
   );
 };
 
-export default DropdownMenu;
+export default SubMenu;
 
-DropdownMenu.propTypes = {
+SubMenu.propTypes = {
   data: propTypes.arrayOf(
     propTypes.shape({
       id: propTypes.string.isRequired,

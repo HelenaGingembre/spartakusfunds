@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Section = styled.section`
@@ -25,9 +26,12 @@ export const NewsListBox = styled.ul`
 export const NewsListItem = styled.li`
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
   -webkit-flex-direction: row;
   flex-direction: row;
   margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 10px 2px 10px 0px rgba(20, 104, 168, 0.4);
 
   &:last-child {
     margin-bottom: 0;
@@ -86,19 +90,20 @@ export const PostContent = styled.div`
   align-items: center;
   text-align: justify;
   width: 60%;
+  border-radius: 5px;
   @media (max-width: 840px) {
     width: 100%;
   }
   padding: 0;
   font-size: ${(p) => p.theme.fontSizes.s};
 `;
-export const LinkPostNews = styled.a`
+export const LinkPostNews = styled(NavLink)`
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-align: justify;
-  background-color: ${(p) => p.theme.colors.accent};
-  color: ${(p) => p.theme.colors.white};
+  background-color: ${(p) => p.theme.colors.blue};
+  color: ${(p) => p.theme.colors.accent};
   padding: 5%;
   height: 100%;
   :hover {

@@ -7,13 +7,13 @@ export const Header = styled.header`
   top: 0;
   z-index: 1;
   width: 100%;
+  height: 80px;
+  padding: 0px 40px;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  padding: 0 20px;
   background: ${(p) => p.theme.colors.bg_header};
   border-bottom: 1px solid ${(p) => p.theme.colors.accent};
   @media (min-width: 750px) {
-    padding: 0 80px;
+    padding: 0px 80px;
   }
 `;

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import propTypes from "prop-types";
 import { nanoid } from "nanoid";
 import Articles from "../../components/Articles/Articles";
-import { SectionProjects } from "../ProjectsView/ProjectView.style";
+import { BoxImg, Img } from "./SinglePage.style";
 
 const SinglePage = ({ data }) => {
   const { postName } = useParams();
@@ -17,11 +17,14 @@ const SinglePage = ({ data }) => {
   const article = getArticleByTitle(postName);
 
   return (
-    <SectionProjects>
+    <section>
+      <BoxImg>
+        <Img src={article.image} alt={article.title} />
+      </BoxImg>
       <ul>
         <Articles key={article.id + nanoid(6)} data={article} />
       </ul>
-    </SectionProjects>
+    </section>
   );
 };
 

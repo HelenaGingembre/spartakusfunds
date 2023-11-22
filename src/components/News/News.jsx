@@ -1,4 +1,4 @@
-//import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import propTypes from "prop-types";
 import { nanoid } from "nanoid";
 import NewsListItems from "./NewsListItems";
@@ -11,19 +11,18 @@ import {
 } from "./News.style";
 
 const News = ({ data }) => {
-  // const [articles, setArticles] = useState(data);
-  // console.log("news articles:  ", articles);
+  const [articles, setArticles] = useState(data);
 
-  // useEffect(() => {
-  //   setArticles((prevState) => prevState);
-  // }, [articles]);
+  useEffect(() => {
+    setArticles((prevState) => prevState);
+  }, [articles]);
 
   return (
     <Section id="news">
       <Title>News</Title>
-      {data.length > 0 ? (
+      {articles.length > 0 ? (
         <NewsListBox>
-          {data.map((article) => (
+          {articles.map((article) => (
             <NewsListItems item={article} key={article.id + nanoid(9)} />
           ))}
         </NewsListBox>

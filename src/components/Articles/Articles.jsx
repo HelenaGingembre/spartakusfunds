@@ -1,13 +1,11 @@
 import propTypes from "prop-types";
-import logo from "../../assets/images/logo.jpg";
+
 import { getCategory } from "../../services/helpers";
 
 import {
   Item,
-  LogoContainer,
   LinkPost,
   Title,
-  Img,
   Content,
   TimeBox,
   SubTitle,
@@ -16,10 +14,10 @@ import {
 
 const Articles = ({ data }) => {
   const {
-    id,
+    // id,
     title,
     date,
-    image,
+    // image,
     category_id,
     description,
     title_block1_content1,
@@ -34,13 +32,9 @@ const Articles = ({ data }) => {
 
   return (
     <Item id={title}>
-      <LogoContainer>
-        <Img src={logo} alt="Logo spartacus" />
-      </LogoContainer>
-
       <Title>
         <LinkPost
-          href={getCategory(category_id) + title.toLowerCase()}
+          to={getCategory(category_id) + title}
           target="_blank"
           rel="noopener noreferrer"
         >

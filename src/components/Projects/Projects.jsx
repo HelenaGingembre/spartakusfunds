@@ -2,10 +2,11 @@ import propTypes from "prop-types";
 import { nanoid } from "nanoid";
 
 import Articles from "../Articles/Articles";
+import { ListItems } from "./Projects.style";
 
 const Projects = ({ projects }) => {
   return (
-    <ul>
+    <ListItems>
       {projects.length > 0 ? (
         projects
           .filter((item) => item.category_id === "2")
@@ -13,7 +14,7 @@ const Projects = ({ projects }) => {
       ) : (
         <h4>There are no articles yet</h4>
       )}
-    </ul>
+    </ListItems>
   );
 };
 

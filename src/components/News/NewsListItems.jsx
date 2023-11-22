@@ -11,13 +11,6 @@ import {
 
 const NewsListItems = ({ item }) => {
   const { image, title, description, category_id } = item;
-  //console.log("item----->", item);
-  //console.log("key----->", key);
-  // const getCategory = (itemCategory) => {
-  //   const result = itemCategory === "2" ? "/projects/" : "/market/";
-
-  //   return result;
-  // };
 
   return (
     <NewsListItem>
@@ -30,7 +23,7 @@ const NewsListItems = ({ item }) => {
 
       <PostContent>
         <LinkPostNews
-          href={getCategory(category_id) + title.toLowerCase()}
+          to={getCategory(category_id) + title}
           target="_blank"
           rel="noopener noreferrer"
         >

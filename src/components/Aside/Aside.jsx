@@ -1,4 +1,4 @@
-import photoAside from "../../assets/images/building.jpg";
+import photoAside from "../../assets/images/post_private_equity.jpg";
 import {
   Advertise,
   BoxBlue,

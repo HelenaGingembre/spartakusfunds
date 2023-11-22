@@ -1,24 +1,18 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import logo from "../../assets/images/logo.jpg";
 
 export const Item = styled.li`
-  margin-bottom: 10px;
-`;
-
-export const LogoContainer = styled.div`
-  overflow: hidden;
-  width: 15%;
-  margin: 0 auto;
-  @media (max-width: 750px) {
-    width: 30%;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+    &::after {
+      content: url(${logo});
+      font-size: 150%;
+    }
   }
 `;
 
-export const Img = styled.img`
-  display: block;
-  margin: 0 auto;
-`;
-
-export const LinkPost = styled.a`
+export const LinkPost = styled(NavLink)`
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +47,10 @@ export const SubTitle = styled.h3`
 `;
 export const SubText = styled.p`
   text-align: justify;
+  &::first-letter {
+    color: ${(p) => p.theme.colors.accent};
+    font-size: 200%;
+  }
 `;
 export const Content = styled.div`
   padding: 15px 30px;
