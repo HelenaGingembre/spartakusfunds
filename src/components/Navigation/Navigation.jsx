@@ -8,7 +8,7 @@ import SubMenu from "./SubMenu";
 const Navigation = () => {
   const [articles, setArticles] = useState(getArticles());
 
-  let ref = useRef();
+  //let ref = useRef();
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const menuToggle = () => {
@@ -56,13 +56,12 @@ const Navigation = () => {
       </MenuBtn>
       <Nav menuToggle={isOpenMenu}>
         <ul>
-          <li ref={ref}>
+          <li>
             <Link exact to="/" onClick={menuToggle}>
               Home
             </Link>
           </li>
           <DropdownMenuBox
-            ref={ref}
             onMouseEnter={handleMouseEnterFirst}
             onMouseLeave={handleMouseLeaveFirst}
           >
@@ -78,7 +77,7 @@ const Navigation = () => {
             )}
           </DropdownMenuBox>
           <DropdownMenuBox
-            ref={ref}
+            // ref={ref}
             onMouseEnter={handleMouseEnterSecond}
             onMouseLeave={handleMouseLeaveSecond}
           >
@@ -93,12 +92,12 @@ const Navigation = () => {
               )
             )}
           </DropdownMenuBox>
-          <li ref={ref}>
+          <li>
             <Link to="/about" onClick={menuToggle}>
               About Us
             </Link>
           </li>
-          <li ref={ref}>
+          <li>
             <Link to="/contact" onClick={menuToggle}>
               Contact
             </Link>
