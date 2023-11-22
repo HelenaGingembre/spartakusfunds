@@ -12,7 +12,7 @@ export const SubMenuUl = styled.ul`
   transition: all linear 0.3s;
   align-items: stretch;
   //opacity: ${({ menuToggle }) => (menuToggle ? 1 : 0)};
-  //pointer-events: ${({ menuToggle }) => (menuToggle ? "painted" : "none")};
+  display: ${({ menuToggle }) => (menuToggle ? "none" : "flex")};
   @media (min-width: 749px) {
     display: none;
     visibility: hidden;

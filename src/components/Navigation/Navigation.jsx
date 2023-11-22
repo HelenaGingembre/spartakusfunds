@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 import { getArticles } from "../../services/serviceApi";
 import DropdownMenu from "./DropdownMenu";
@@ -7,8 +7,6 @@ import SubMenu from "./SubMenu";
 
 const Navigation = () => {
   const [articles, setArticles] = useState(getArticles());
-
-  //let ref = useRef();
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const menuToggle = () => {
@@ -49,54 +47,73 @@ const Navigation = () => {
         )}
       </MenuBtn>
       <Nav menuToggle={isOpenMenu}>
-        <ul>
-          <li>
-            <Link exact to="/" onClick={menuToggle}>
-              Home
-            </Link>
-          </li>
-          <DropdownMenuBox
-            onMouseEnter={handleMouseEnterFirst}
-            onMouseLeave={handleMouseLeaveFirst}
-          >
-            <Link to="/projects" onClick={menuToggle}>
-              Investment Philosophy
-            </Link>
-            {isOpenMenu ? (
-              <SubMenu data={articles} category="2" />
-            ) : (
-              isDropdownVisibleFirst && (
+        {isOpenMenu ? (
+          <ul>
+            <li>
+              <Link exact to="/" onClick={menuToggle}>
+                Home
+              </Link>
+            </li>
+            <DropdownMenuBox>
+              <Link to="/projects" onClick={menuToggle}>
+                Investment Philosophy
+              </Link>
+              <SubMenu data={articles} category="2" onClick={menuToggle} />
+            </DropdownMenuBox>
+            <DropdownMenuBox>
+              <Link to="/market" onClick={menuToggle}>
+                Market
+              </Link>
+              <SubMenu data={articles} category="1" onClick={menuToggle} />
+            </DropdownMenuBox>
+            <li>
+              <Link to="/about" onClick={menuToggle}>
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={menuToggle}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        ) : (
+          <ul>
+            <li>
+              <Link exact to="/">
+                Home
+              </Link>
+            </li>
+            <DropdownMenuBox
+              onMouseEnter={handleMouseEnterFirst}
+              onMouseLeave={handleMouseLeaveFirst}
+            >
+              <Link to="/projects">Investment Philosophy</Link>
+              {isDropdownVisibleFirst ? (
                 <DropdownMenu data={articles} category="2" />
-              )
-            )}
-          </DropdownMenuBox>
-          <DropdownMenuBox
-            // ref={ref}
-            onMouseEnter={handleMouseEnterSecond}
-            onMouseLeave={handleMouseLeaveSecond}
-          >
-            <Link to="/market" onClick={menuToggle}>
-              Market
-            </Link>
-            {isOpenMenu ? (
-              <SubMenu data={articles} category="1" />
-            ) : (
-              isDropdownVisibleSecond && (
+              ) : (
+                ``
+              )}
+            </DropdownMenuBox>
+            <DropdownMenuBox
+              onMouseEnter={handleMouseEnterSecond}
+              onMouseLeave={handleMouseLeaveSecond}
+            >
+              <Link to="/market">Market</Link>
+              {isDropdownVisibleSecond ? (
                 <DropdownMenu data={articles} category="1" />
-              )
-            )}
-          </DropdownMenuBox>
-          <li>
-            <Link to="/about" onClick={menuToggle}>
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={menuToggle}>
-              Contact
-            </Link>
-          </li>
-        </ul>
+              ) : (
+                ``
+              )}
+            </DropdownMenuBox>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        )}
       </Nav>
     </>
   );

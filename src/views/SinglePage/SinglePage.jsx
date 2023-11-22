@@ -19,7 +19,7 @@ const SinglePage = ({ data }) => {
   return (
     <section>
       <BoxImg>
-        <Img src={article.image} alt={article.title} />
+        <Img src={`.` + article.image} alt={article.title} />
       </BoxImg>
       <ul>
         <Articles key={article.id + nanoid(6)} data={article} />

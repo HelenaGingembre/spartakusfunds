@@ -3,16 +3,18 @@ import propTypes from "prop-types";
 import { getCategory } from "../../services/helpers";
 import { SubMenuLi, SubMenuUl, SubMenuLink } from "./SubMenu.style";
 
-const SubMenu = ({ data, category }) => {
-  // const res = data.filter((article) => category === article.category_id);
-
+const SubMenu = ({ data, category, onClick }) => {
   return (
     <SubMenuUl>
       {data
         .filter((article) => category === article.category_id)
         .map((article) => (
           <SubMenuLi>
-            <SubMenuLink exact to={getCategory(category) + article.title}>
+            <SubMenuLink
+              exact
+              to={getCategory(category) + article.title}
+              onClick={onClick}
+            >
               {article.title}
             </SubMenuLink>
           </SubMenuLi>
@@ -43,4 +45,5 @@ SubMenu.propTypes = {
     })
   ),
   category: propTypes.string.isRequired,
+  onClick: propTypes.func,
 };
