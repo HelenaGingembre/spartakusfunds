@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/spartakusfunds/static/css/main.ec6c1dfb.css",
-    "main.js": "/spartakusfunds/static/js/main.5791bdf6.js",
+    "main.js": "/spartakusfunds/static/js/main.65b4a212.js",
     "static/js/979.d0424605.chunk.js": "/spartakusfunds/static/js/979.d0424605.chunk.js",
     "static/js/76.fb86e204.chunk.js": "/spartakusfunds/static/js/76.fb86e204.chunk.js",
     "static/js/842.655e062e.chunk.js": "/spartakusfunds/static/js/842.655e062e.chunk.js",
@@ -19,7 +19,7 @@
     "static/media/oil.jpg": "/spartakusfunds/static/media/oil.08fa4cc3652543d554c5.jpg",
     "index.html": "/spartakusfunds/index.html",
     "main.ec6c1dfb.css.map": "/spartakusfunds/static/css/main.ec6c1dfb.css.map",
-    "main.5791bdf6.js.map": "/spartakusfunds/static/js/main.5791bdf6.js.map",
+    "main.65b4a212.js.map": "/spartakusfunds/static/js/main.65b4a212.js.map",
     "979.d0424605.chunk.js.map": "/spartakusfunds/static/js/979.d0424605.chunk.js.map",
     "76.fb86e204.chunk.js.map": "/spartakusfunds/static/js/76.fb86e204.chunk.js.map",
     "842.655e062e.chunk.js.map": "/spartakusfunds/static/js/842.655e062e.chunk.js.map",
@@ -32,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.ec6c1dfb.css",
-    "static/js/main.5791bdf6.js"
+    "static/js/main.65b4a212.js"
   ]
 }
