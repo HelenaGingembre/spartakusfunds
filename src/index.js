@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "styled-components";
@@ -14,11 +14,13 @@ import { theme } from "./services/theme";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/spartakusfunds/">
+    {/* <BrowserRouter basename="/"> */}
+    <HashRouter basename="/spartakusfunds/">
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
+    {/* </BrowserRouter> */}
   </React.StrictMode>
 );
 
