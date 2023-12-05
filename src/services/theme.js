@@ -9,6 +9,8 @@ export const theme = {
     gray_transparent: "rgb(204 204 204 / 50%)",
     white: "#FFFFFF",
     accent: "rgba(20, 104, 168, 1)",
+    accent_link: "rgba(27, 153, 232, 1)",
+    accent_btn: "rgba(26, 147, 239, 0.8)",
     accentHover: "rgba(20, 104, 168, 0.5)",
     accentHoverLink: "#3091EB",
 

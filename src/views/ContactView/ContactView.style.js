@@ -41,7 +41,7 @@ export const BtnForm = styled.button`
   align-items: center;
   justify-content: center;
   color: ${(p) => p.theme.colors.white};
-  background-color: ${(p) => p.theme.colors.accent};
+  background-color: ${(p) => p.theme.colors.accent_btn};
   border-radius: 4px;
   border: 1px solid ${(p) => p.theme.colors.accent};
   cursor: pointer;

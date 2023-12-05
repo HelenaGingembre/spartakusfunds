@@ -22,9 +22,11 @@ const News = ({ data }) => {
       <Title>News</Title>
       {articles.length > 0 ? (
         <NewsListBox>
-          {articles.map((article) => (
-            <NewsListItems item={article} key={article.id + nanoid(9)} />
-          ))}
+          {articles
+            .filter((item) => item.category_id === "2")
+            .map((article) => (
+              <NewsListItems item={article} key={article.id + nanoid(9)} />
+            ))}
         </NewsListBox>
       ) : (
         <BoxMessageEmpty>

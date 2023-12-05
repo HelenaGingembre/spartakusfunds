@@ -27,21 +27,16 @@ export const NewsListItem = styled.li`
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  margin-bottom: 20px;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin: 0 5px;
   border-radius: 5px;
   box-shadow: 10px 2px 10px 0px rgba(20, 104, 168, 0.4);
+  width: 30%;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-  &:nth-child(2n) {
-    @media (min-width: 840px) {
-      flex-wrap: wrap-reverse;
-      -webkit-flex-direction: row-reverse;
-      flex-direction: row-reverse;
-    }
+  @media (max-width: 840px) {
+    width: 100%;
+    margin: 0 0 30px 0;
   }
 `;
 
@@ -51,17 +46,11 @@ export const BoxCenter = styled.div`
 export const BoxImg = styled.div`
   position: relative;
   overflow: hidden;
-  min-height: 300px;
-  width: 40%;
-  @media (max-width: 840px) {
-    width: 100%;
-  }
 `;
 
 export const ImgListItem = styled.img`
   background-color: ${(p) => p.theme.colors.gray};
   display: block;
-  height: 100%;
   margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,26 +75,27 @@ export const TitleListItem = styled.h3`
 
 export const PostContent = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  width: 60%;
-  border-radius: 5px;
-  @media (max-width: 840px) {
-    width: 100%;
-  }
+  height: 250px;
   padding: 0;
+  justify-content: center;
+  text-align: flex-start;
   font-size: ${(p) => p.theme.fontSizes.s};
+  @media only screen and (min-width: 841px) and (max-width: 1140px) {
+    height: 350px;
+  }
+  @media only screen and (min-width: 480px) and (max-width: 840px) {
+    height: 200px;
+  }
 `;
 export const LinkPostNews = styled(NavLink)`
   display: inline-flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: justify;
   background-color: ${(p) => p.theme.colors.blue};
   color: ${(p) => p.theme.colors.accent};
-  padding: 5%;
-  height: 100%;
+  padding: 30px 20px 30px;
+  width: 100%;
   :hover {
     background-color: ${(p) => p.theme.colors.accentHover};
     color: ${(p) => p.theme.colors.accent};

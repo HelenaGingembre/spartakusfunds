@@ -8,12 +8,11 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import { BoxError, BtnForm } from "../../views/ContactView/ContactView.style";
 
-const FormContact = ({ onSubmit }) => {
+const FormContact = () => {
   const [disabled, setDisabled] = useState(false);
   const form = useRef();
 
   const sendDataToEmailApi = async (data) => {
-    // Destrcture data object
     const { firstName, lastName, email, message } = data;
 
     /*EMAILJS KEYS ----------*/
@@ -54,7 +53,6 @@ const FormContact = ({ onSubmit }) => {
   const onHandleSubmit = async (values, { resetForm }) => {
     const emailWasSent = await sendDataToEmailApi(values);
     if (emailWasSent) {
-      onSubmit(values);
       // Reset contact form fields after submission
       resetForm();
     }
@@ -139,7 +137,9 @@ const FormContact = ({ onSubmit }) => {
             render={(msg) => <BoxError>{msg}</BoxError>}
           />
 
-          <BtnForm type="submit">Submit</BtnForm>
+          <BtnForm type="submit" disabled={disabled}>
+            Submit
+          </BtnForm>
 
           <ToastContainer
             autoClose={5000}

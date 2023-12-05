@@ -22,7 +22,7 @@ export const SliderSection = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: 77vh;
   color: ${(p) => p.theme.colors.white};
 
   -webkit-box-align: center;
@@ -92,7 +92,7 @@ export const BtnLink = styled.a`
   align-items: center;
   justify-content: center;
   color: ${(p) => p.theme.colors.white};
-  background-color: ${(p) => p.theme.colors.accent};
+  background-color: ${(p) => p.theme.colors.accent_btn};
   border-radius: 4px;
   border: 1px solid ${(p) => p.theme.colors.accent};
   cursor: pointer;

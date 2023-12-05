@@ -169,26 +169,65 @@ input[type="textarea"] {
 /*******************
 *******Go to Top*****
 ********************/
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 55px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: 1px solid rgba(20, 104, 168, 1); /* Remove borders */
-  outline: none; /* Remove outline */
-  /*background-color: #ffffff; /* Set a background color */
-  color: rgba(20, 104, 168, 1); /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 12px; /* Increase font size */
-  -webkit-box-shadow: inset 7px 5px 46px -12px rgba(20, 104, 168, 1);
-  box-shadow: inset 7px 5px 46px -12px rgba(20, 104, 168, 1);
-  text-transform: uppercase;
-  text-shadow: 1px 3px 5px #fff;
+
+.to-top {
+  bottom: 70px;
+  background-color: rgba(26, 147, 239, 0.8) !important;
+  box-shadow: inset 7px 5px 46px -12px rgba(20, 104, 168, 1) !important;
 }
-#myBtn:hover {
-  background-color: rgba(20, 104, 168, 1);
-  color: #ffffff;
+.to-top:hover,
+.to-top:focus {
+  background-color: rgba(20, 104, 168, 1) !important;
+}
+/*******************
+******* Cookies Banner *****
+********************/
+.alert-cookie {
+  bottom: 0px;
+  padding: 0px 20px;
+  align-items: baseline;
+  background-color: rgba(6, 28, 70, 0.8);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.alert-cookie a {
+  color: rgba(26, 147, 239, 0.8);
+  text-shadow: rgba(255, 255, 255, 0.5) 0.3px 0.3px 0.5px;
+}
+.alert-cookie a:hover,
+.alert-cookie a:focus {
+  color: rgba(26, 147, 239, 0.8);
+  text-shadow: none;
+}
+.btn-cookie {
+  background: rgba(26, 147, 239, 0.8);
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: rgba(255, 255, 255, 0.5) 0.3px 0.3px 0.5px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  margin: 15px;
+}
+.btn-cookie:hover,
+.btn-cookie:focus {
+  background: rgba(20, 104, 168, 1);
+  border: 0px;
+}
+
+@media screen and (max-width: 769px) {
+  .alert-cookie {
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }

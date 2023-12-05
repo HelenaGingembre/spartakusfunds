@@ -21,19 +21,12 @@ const Footer = () => {
         <FooterNav>
           <ul>
             <li>
-              <Link
-                exact
-                to="/"
-                /*onClick={menuToggle}*/ rel="noopener noreferrer  nofollow"
-              >
+              <Link exact to="/" rel="noopener noreferrer  nofollow">
                 Home
               </Link>
             </li>
             <li>
-              <Link
-                to="/projects"
-                /*onClick={menuToggle}*/ rel="noopener noreferrer  nofollow"
-              >
+              <Link to="/projects" rel="noopener noreferrer  nofollow">
                 Investment Philosophy
               </Link>
             </li>
@@ -43,13 +36,13 @@ const Footer = () => {
 
       <FooterEnd>
         <Info>
-          <span>&copy; 2023 . </span>
+          <span>&copy; 2023 &nbsp; </span>
           <Link href="#" rel="noopener noreferrer  nofollow">
             by Spartacus Partners
           </Link>
         </Info>
         <Info>
-          <span> Developed </span>
+          <span> Developed with</span>
           <Heart
             animate={{
               scale: [1, 1.5, 1],

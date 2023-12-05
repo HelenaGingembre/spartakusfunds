@@ -13,7 +13,6 @@ import {
 } from "./HomeView.style";
 
 const HomeView = ({ data }) => {
-  console.log("news data--->", data);
   return (
     <>
       <Wrapper>

@@ -17,3 +17,8 @@ export const Header = styled.header`
     padding: 0px 80px;
   }
 `;
+export const Link = styled.a`
+  :hover {
+    color: ${(p) => p.theme.colors.accent_link};
+  }
+`;
