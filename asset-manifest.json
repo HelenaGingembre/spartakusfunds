@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/spartakusfunds/static/css/main.ec6c1dfb.css",
-    "main.js": "/spartakusfunds/static/js/main.d089c88c.js",
-    "static/js/979.d0424605.chunk.js": "/spartakusfunds/static/js/979.d0424605.chunk.js",
+    "main.css": "/spartakusfunds/static/css/main.ed1cb455.css",
+    "main.js": "/spartakusfunds/static/js/main.55d1b8d3.js",
+    "static/js/979.3176de4c.chunk.js": "/spartakusfunds/static/js/979.3176de4c.chunk.js",
     "static/js/76.fb86e204.chunk.js": "/spartakusfunds/static/js/76.fb86e204.chunk.js",
     "static/js/842.655e062e.chunk.js": "/spartakusfunds/static/js/842.655e062e.chunk.js",
     "static/js/625.08761da8.chunk.js": "/spartakusfunds/static/js/625.08761da8.chunk.js",
-    "static/js/297.a853a9dd.chunk.js": "/spartakusfunds/static/js/297.a853a9dd.chunk.js",
+    "static/js/297.f490ffe2.chunk.js": "/spartakusfunds/static/js/297.f490ffe2.chunk.js",
     "static/js/816.0e7bfb3a.chunk.js": "/spartakusfunds/static/js/816.0e7bfb3a.chunk.js",
+    "static/js/722.c833af0b.chunk.js": "/spartakusfunds/static/js/722.c833af0b.chunk.js",
     "static/js/330.5b287659.chunk.js": "/spartakusfunds/static/js/330.5b287659.chunk.js",
     "static/js/787.bae0f22b.chunk.js": "/spartakusfunds/static/js/787.bae0f22b.chunk.js",
     "static/css/544.7c3dd9d6.chunk.css": "/spartakusfunds/static/css/544.7c3dd9d6.chunk.css",
@@ -18,20 +19,21 @@
     "static/media/market-view.jpg": "/spartakusfunds/static/media/market-view.acb25766d29a04ee092f.jpg",
     "static/media/oil.jpg": "/spartakusfunds/static/media/oil.08fa4cc3652543d554c5.jpg",
     "index.html": "/spartakusfunds/index.html",
-    "main.ec6c1dfb.css.map": "/spartakusfunds/static/css/main.ec6c1dfb.css.map",
-    "main.d089c88c.js.map": "/spartakusfunds/static/js/main.d089c88c.js.map",
-    "979.d0424605.chunk.js.map": "/spartakusfunds/static/js/979.d0424605.chunk.js.map",
+    "main.ed1cb455.css.map": "/spartakusfunds/static/css/main.ed1cb455.css.map",
+    "main.55d1b8d3.js.map": "/spartakusfunds/static/js/main.55d1b8d3.js.map",
+    "979.3176de4c.chunk.js.map": "/spartakusfunds/static/js/979.3176de4c.chunk.js.map",
     "76.fb86e204.chunk.js.map": "/spartakusfunds/static/js/76.fb86e204.chunk.js.map",
     "842.655e062e.chunk.js.map": "/spartakusfunds/static/js/842.655e062e.chunk.js.map",
     "625.08761da8.chunk.js.map": "/spartakusfunds/static/js/625.08761da8.chunk.js.map",
-    "297.a853a9dd.chunk.js.map": "/spartakusfunds/static/js/297.a853a9dd.chunk.js.map",
+    "297.f490ffe2.chunk.js.map": "/spartakusfunds/static/js/297.f490ffe2.chunk.js.map",
     "816.0e7bfb3a.chunk.js.map": "/spartakusfunds/static/js/816.0e7bfb3a.chunk.js.map",
+    "722.c833af0b.chunk.js.map": "/spartakusfunds/static/js/722.c833af0b.chunk.js.map",
     "330.5b287659.chunk.js.map": "/spartakusfunds/static/js/330.5b287659.chunk.js.map",
     "787.bae0f22b.chunk.js.map": "/spartakusfunds/static/js/787.bae0f22b.chunk.js.map",
     "544.7c3dd9d6.chunk.css.map": "/spartakusfunds/static/css/544.7c3dd9d6.chunk.css.map"
   },
   "entrypoints": [
-    "static/css/main.ec6c1dfb.css",
-    "static/js/main.d089c88c.js"
+    "static/css/main.ed1cb455.css",
+    "static/js/main.55d1b8d3.js"
   ]
 }
