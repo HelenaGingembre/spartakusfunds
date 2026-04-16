@@ -13,6 +13,9 @@ import { theme } from "../../services/theme";
 import logo from "../../assets/images/logo.jpg";
 
 const Footer = () => {
+  const d = new Date();
+  // let fullDate = d.toLocaleDateString();
+  const year = d.getFullYear();
   return (
     <MainFooter>
       <ImgFooter src={logo} alt="Spartacus Partners Logo" />
@@ -36,7 +39,7 @@ const Footer = () => {
 
       <FooterEnd>
         <Info>
-          <span>&copy; 2023 &nbsp; </span>
+          <span>&copy; 2011 - {year} &nbsp; </span>
           <Link href="#" rel="noopener noreferrer  nofollow">
             by Spartacus Partners
           </Link>
